@@ -5,6 +5,7 @@ esbuild.build({
   platform: "node",
   bundle: true,
   minify: true,
-  outfile: "dist/main.js",
+  sourcemap: true,
   target: "es2020",
+  outfile: "dist/index.js",
 });
