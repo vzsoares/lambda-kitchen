@@ -14,5 +14,6 @@ functions:
           method: get
 
 plugins:
+  - serverless-esbuild
   - serverless-offline
   - serverless-plugin-typescript
