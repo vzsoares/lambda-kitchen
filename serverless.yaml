@@ -1,4 +1,4 @@
-service: serverless-http-api-typescript
+service: i-say-hello
 frameworkVersion: '3'
 
 provider:
@@ -20,5 +20,4 @@ custom:
 
 plugins:
   - serverless-esbuild
-  - serverless-plugin-typescript
   - serverless-offline

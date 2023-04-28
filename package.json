@@ -18,7 +18,6 @@
     "serverless": "^3.30.1",
     "serverless-esbuild": "^1.43.1",
     "serverless-offline": "^12.0.4",
-    "serverless-plugin-typescript": "^2.1.4",
     "typescript": "^5.0.4"
   }
 }
