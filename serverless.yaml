@@ -13,7 +13,12 @@ functions:
           path: /
           method: get
 
+custom:
+  esbuild:
+    bundle: true
+    minify: true
+
 plugins:
   - serverless-esbuild
-  - serverless-offline
   - serverless-plugin-typescript
+  - serverless-offline

@@ -3,5 +3,5 @@
 *.zip
 .env
 .serverless
-
+.build
 .esbuild
