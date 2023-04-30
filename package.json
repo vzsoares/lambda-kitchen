@@ -1,11 +1,14 @@
 {
-  "name": "lambda-tests",
-  "version": "1.0.0",
+  "name": "lambda-typescript",
+  "version": "0.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "handler.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node esbuild.js"
+    "debug": "sls offline start --stage dev",
+    "debug:prod": "sls offline start --stage prod",
+    "deploy": "sls deploy --stage dev",
+    "deploy:prod": "sls deploy --stage prod"
   },
   "keywords": [],
   "author": "",
