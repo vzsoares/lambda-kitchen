@@ -16,6 +16,7 @@ extends:
 
 plugins:
   - '@typescript-eslint'
+  - log
   - import
   - prettier
 
