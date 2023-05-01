@@ -22,12 +22,6 @@
       "lint-fix"
     ]
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn lint-staged && yarn run check-types",
-      "pre-push": "yarn run prettier-check && yarn run lint-check && yarn run check-types"
-    }
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
