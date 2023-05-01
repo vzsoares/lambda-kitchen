@@ -4,11 +4,24 @@
   "description": "",
   "main": "handler.ts",
   "scripts": {
+    "prepare": "husky install",
     "test": "echo \"Error: no test specified\" && exit 1",
     "debug": "sls offline start --stage dev",
     "debug:prod": "sls offline start --stage prod",
     "deploy": "sls deploy --stage dev",
     "deploy:prod": "sls deploy --stage prod"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "yarn run prettier-format",
+      "yarn run lint-fix"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint-staged && yarn run check-types",
+      "pre-push": "yarn run prettier-check && yarn run lint-check && yarn run check-types"
+    }
   },
   "keywords": [],
   "author": "",
@@ -26,6 +39,7 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-log": "^1.2.7",
     "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3",
     "prettier": "^2.8.8",
     "serverless": "^3.30.1",
     "serverless-esbuild": "^1.43.1",
