@@ -1,17 +1,28 @@
+parser: '@typescript-eslint/parser'
+parserOptions:
+  project: ./tsconfig.json
+  tsconfigRootDir: ./
+root: true
+
 extends:
   - eslint:recommended
   - plugin:@typescript-eslint/recommended
   - plugin:@typescript-eslint/recommended-requiring-type-checking
   - plugin:@typescript-eslint/strict
+  - plugin:import/recommended
+  - plugin:import/typescript
   - plugin:prettier/recommended
   - prettier
-parser: "@typescript-eslint/parser"
+
 plugins:
-  - "@typescript-eslint"
+  - '@typescript-eslint'
+  - import
   - prettier
-parserOptions:
-  project: ./tsconfig.json
-  tsconfigRootDir: ./
-root: true
+
+settings:
+  import/resolver:
+    typescript: true
+    node: true
+
 rules:
   prettier/prettier: error
