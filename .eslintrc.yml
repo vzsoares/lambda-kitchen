@@ -4,8 +4,9 @@ parserOptions:
   tsconfigRootDir: ./
 root: true
 
-ignores:
+ignorePatterns:
   - esbuild.js
+  - dist/*
 
 extends:
   - eslint:recommended

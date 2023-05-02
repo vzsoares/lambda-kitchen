@@ -12,7 +12,9 @@
     "check-types": "tsc --project ./tsconfig.json --noemit && echo 'Types are valid ✔︎'",
     "prepare": "husky install",
     "deploy": "bash deploy_prod.sh",
-    "deploy:dev": "bash deploy_dev.sh"
+    "deploy:dev": "bash deploy_dev.sh",
+    "invoke": "aws lambda invoke --function-name i-say-hello out --log-type Tail --query 'LogResult' --output text |  base64 -d",
+    "invoke:dev": "aws lambda invoke --function-name i-say-hello-dev out --log-type Tail --query 'LogResult' --output text |  base64 -d"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
