@@ -10,11 +10,8 @@
     "prettier-format": "prettier --config ./.prettierrc.yml --write .",
     "prettier-check": "prettier --config ./.prettierrc.yml --check .",
     "check-types": "tsc --project ./tsconfig.json --noemit && echo 'Types are valid ✔︎'",
-    "debug": "sls offline start --stage dev",
-    "debug:prod": "sls offline start --stage prod",
-    "deploy": "sls deploy --stage dev",
-    "deploy:prod": "sls deploy --stage prod",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "deploy": "bash deploy_prod.sh"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
@@ -41,9 +38,6 @@
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
     "prettier": "^2.8.8",
-    "serverless": "^3.30.1",
-    "serverless-esbuild": "^1.43.1",
-    "serverless-offline": "^12.0.4",
     "typescript": "^5.0.4"
   }
 }
