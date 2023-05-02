@@ -11,7 +11,8 @@
     "prettier-check": "prettier --config ./.prettierrc.yml --check .",
     "check-types": "tsc --project ./tsconfig.json --noemit && echo 'Types are valid ✔︎'",
     "prepare": "husky install",
-    "deploy": "bash deploy_prod.sh"
+    "deploy": "bash deploy_prod.sh",
+    "deploy:dev": "bash deploy_dev.sh"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [

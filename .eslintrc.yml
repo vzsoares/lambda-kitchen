@@ -4,6 +4,9 @@ parserOptions:
   tsconfigRootDir: ./
 root: true
 
+ignores:
+  - esbuild.js
+
 extends:
   - eslint:recommended
   - plugin:@typescript-eslint/recommended
@@ -27,6 +30,7 @@ settings:
 
 rules:
   prettier/prettier: error
+  '@typescript-eslint/require-await': 0
   import/order:
     - error
     - newlines-between: always
