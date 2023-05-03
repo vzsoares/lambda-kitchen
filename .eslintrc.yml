@@ -4,6 +4,10 @@ parserOptions:
   tsconfigRootDir: ./
 root: true
 
+ignorePatterns:
+  - esbuild.js
+  - dist/*
+
 extends:
   - eslint:recommended
   - plugin:@typescript-eslint/recommended
