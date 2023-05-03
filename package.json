@@ -10,8 +10,8 @@
     "prettier-format": "prettier --config ./.prettierrc.yml --write .",
     "prettier-check": "prettier --config ./.prettierrc.yml --check .",
     "check-types": "tsc --project ./tsconfig.json --noemit && echo 'Types are valid ✔︎'",
-    "debug": "sls offline start --stage dev",
-    "debug:prod": "sls offline start --stage prod",
+    "debug": "sls offline start --stage dev --reloadHandler",
+    "debug:prod": "sls offline start --stage prod --reloadHandler",
     "deploy": "sls deploy --stage dev",
     "deploy:prod": "sls deploy --stage prod",
     "prepare": "husky install"
