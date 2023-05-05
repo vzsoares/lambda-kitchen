@@ -1,23 +1,10 @@
-service: i-say-hello
+service: layer-utils
 frameworkVersion: '3'
 
 provider:
   name: aws
   runtime: nodejs18.x
 
-functions:
-  handler:
-    handler: handler.handler
-    events:
-      - httpApi:
-          path: /
-          method: get
-
-custom:
-  esbuild:
-    bundle: true
-    minify: true
-
-plugins:
-  - serverless-esbuild
-  - serverless-offline
+layers:
+  layer-utils:
+    path: ./dist/    
