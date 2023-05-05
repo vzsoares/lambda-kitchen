@@ -1,11 +1,11 @@
 const esbuild = require('esbuild');
 
 esbuild.build({
-  entryPoints: ['index.ts'],
+  entryPoints: ['helpers/index.ts'],
   platform: 'node',
   bundle: true,
-  minify: true,
-  sourcemap: true,
+  minify: false,
+  // sourcemap: true,
   target: 'es2020',
-  outfile: 'dist/index.js',
+  outdir: 'dist/nodejs/node_modules/helpers/',
 });

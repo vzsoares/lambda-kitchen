@@ -1,6 +1,6 @@
 import type { APIGatewayProxyResult } from 'aws-lambda';
 
-export const response = (
+const response = (
   statusCode: number,
   data = null,
   msg = null,

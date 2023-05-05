@@ -1,10 +1,9 @@
-service: layer-utils
-frameworkVersion: '3'
+service: layer-helpers
 
 provider:
   name: aws
   runtime: nodejs18.x
 
 layers:
-  layer-utils:
-    path: ./dist/    
+  layerHelpers:
+    path: dist
