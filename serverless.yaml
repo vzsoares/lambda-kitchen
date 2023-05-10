@@ -4,8 +4,12 @@ frameworkVersion: '3'
 provider:
   name: aws
   runtime: nodejs18.x
-  deploymentBucket:
-    name: lambda-deploy-artifacts
+  region: us-east-1
+  stage: ${opt:stage, 'dev'}
+  # deploymentBucket:
+  #   name: lambda-deploy-artifacts-3355e9ebda0
+  environment:
+    STAGE: ${opt:stage, 'dev'}
 
 functions:
   handler:
