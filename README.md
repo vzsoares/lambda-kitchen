@@ -3,14 +3,12 @@
 </br>
 </br>
 
-<p align="center"><img src="https://media.tenor.com/wM-6NvKlEjQAAAAC/swedish-chef.gif"/></p>
+<p align="center"><img src="assets/a-gif-wow.gif"/></p>
 
 </br>
 </br>
 
 > <p align="center">what's cooking? lambdas!</p>
-
-
 
 ## How to run:
 
