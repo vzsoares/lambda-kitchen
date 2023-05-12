@@ -14,6 +14,7 @@
     "debug:prod": "sls offline start --stage prod --reloadHandler",
     "deploy": "sls deploy --stage dev",
     "deploy:prod": "sls deploy --stage prod",
+    "build": "sls package --aws-profile myself",
     "prepare": "husky install"
   },
   "lint-staged": {
