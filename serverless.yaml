@@ -1,4 +1,4 @@
-service: i-say-hello
+service: hello-world-typescript-serverless
 frameworkVersion: '3'
 
 provider:
@@ -6,24 +6,36 @@ provider:
   runtime: nodejs18.x
   region: us-east-1
   stage: ${opt:stage, 'dev'}
-  # deploymentBucket:
-  #   name: lambda-deploy-artifacts-3355e9ebda0
+  deploymentBucket:
+    name: lambda-artifacts-335569e
   environment:
-    STAGE: ${opt:stage, 'dev'}
+    STAGE: ${sls:stage}
+  httpApi:
+    cors: true
 
 functions:
   handler:
     handler: handler.handler
     events:
       - httpApi:
-          path: /
+          path: /hello
           method: get
 
 custom:
   esbuild:
     bundle: true
     minify: true
+  customDomain:
+    domainName: 'api.not-too-powerful.zenhalab.com'
+    stage: ${sls:stage}
+    basePath: '${sls:stage}' # basePath must be unique among lambdas
+    certificateName: 'api.not-too-powerful.zenhalab.com'
+    createRoute53Record: false
+    createRoute53IPv6Record: false
+    endpointType: REGIONAL
+    apiType: http # http => httpApi; rest => http
 
 plugins:
   - serverless-esbuild
   - serverless-offline
+  - serverless-domain-manager
