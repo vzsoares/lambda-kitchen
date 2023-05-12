@@ -38,3 +38,8 @@ TODO=TODO
 ### Stage base path e.g www.domain/`dev`/images
 
 Configure serverless-domain-manager config `basePath` to '${sls:stage}/'
+
+
+## Links
+
+- organize lambdas : https://aws.amazon.com/blogs/compute/best-practices-for-organizing-larger-serverless-applications/
