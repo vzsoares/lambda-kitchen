@@ -39,3 +39,4 @@ plugins:
   - serverless-esbuild
   - serverless-offline
   - serverless-domain-manager
+  - serverless-deployment-bucket
