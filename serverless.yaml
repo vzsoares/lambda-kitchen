@@ -10,6 +10,7 @@ provider:
     name: lambda-artifacts-335569e
   environment:
     STAGE: ${sls:stage}
+    WEATHER: ${ssm:/${sls:stage}/WEATHER}
   httpApi:
     cors: true
 
