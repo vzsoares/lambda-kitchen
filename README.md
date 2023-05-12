@@ -39,7 +39,6 @@ TODO=TODO
 
 Configure serverless-domain-manager config `basePath` to '${sls:stage}/'
 
-
 ## Links
 
 - organize lambdas : https://aws.amazon.com/blogs/compute/best-practices-for-organizing-larger-serverless-applications/

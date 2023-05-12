@@ -5,10 +5,10 @@
   "main": "handler.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint-fix": "eslint --config ./.eslintrc.yml --fix . --ignore-path ./.gitignore --ext .ts,.tsx",
-    "lint-check": "eslint --config ./.eslintrc.yml . --max-warnings=0 --ignore-path ./.gitignore --ext .ts,.tsx",
-    "prettier-format": "prettier --config ./.prettierrc.yml --write . --ignore-unknown --ignore-path ./.gitignore",
-    "prettier-check": "prettier --config ./.prettierrc.yml --check . --ignore-unknown --ignore-path ./.gitignore",
+    "lint-fix": "eslint --config ./.eslintrc.yml  --ignore-path ./.gitignore --ext .ts,.tsx --fix .",
+    "lint-check": "eslint --config ./.eslintrc.yml --max-warnings=0 --ignore-path ./.gitignore --ext .ts,.tsx .",
+    "prettier-format": "prettier --config ./.prettierrc.yml --ignore-unknown --ignore-path ./.gitignore --write .",
+    "prettier-check": "prettier --config ./.prettierrc.yml --ignore-unknown --ignore-path ./.gitignore --check .",
     "check-types": "tsc --project ./tsconfig.json --noemit && echo 'Types are valid ✔︎'",
     "debug": "sls offline start --stage dev --reloadHandler",
     "debug:prod": "sls offline start --stage prod --reloadHandler",
@@ -18,9 +18,9 @@
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
-      "prettier-format",
-      "lint-fix"
-    ]
+      "yarn lint-fix"
+    ],
+    "*": "yarn prettier-format"
   },
   "keywords": [],
   "author": "",
