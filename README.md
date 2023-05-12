@@ -24,3 +24,17 @@ TODO=TODO
     > - multiple accounts? [READ](https://www.serverless.com/framework/docs/providers/aws/guide/credentials/)
 - `yarn install`
 - develop locally `yarn debug`
+
+### Serverless creates one bucket for each lambda
+
+[plugin: serverless-deployment-bucket](https://www.serverless.com/plugins/serverless-deployment-bucket)
+
+### Api gateway custom domain
+
+[plugin: serverless-domain-manager](https://www.serverless.com/plugins/serverless-domain-manager)
+
+[post#](https://www.serverless.com/blog/serverless-api-gateway-domain/)
+
+### Stage base path e.g www.domain/`dev`/images
+
+Configure serverless-domain-manager config `basePath` to '${sls:stage}/'

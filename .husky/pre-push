@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-yarn run prettier-check && yarn run lint-check && yarn run check-types
+yarn run prettier-check && yarn run lint-check && yarn run check-types && yarn sls package
