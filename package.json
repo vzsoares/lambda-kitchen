@@ -17,9 +17,7 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.{ts,tsx,js,jsx}": [
-      "yarn lint-fix"
-    ],
+    "*.{ts,tsx,js,jsx}": "yarn lint-fix",
     "*": "yarn prettier-format"
   },
   "keywords": [],
