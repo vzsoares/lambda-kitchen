@@ -2,6 +2,8 @@
   "name": "lambda-typescript",
   "version": "0.1.0",
   "description": "",
+  "main": "lib/nodejs/helpers/index.js",
+  "types": "./types/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint-fix": "eslint --config ./.eslintrc.yml --fix .",
@@ -13,7 +15,8 @@
     "debug:prod": "sls offline start --stage prod --reloadHandler",
     "deploy": "sls deploy --stage dev",
     "deploy:prod": "sls deploy --stage prod",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "gen-types":"npx -p typescript tsc index.ts --declaration --allowJs --emitDeclarationOnly --outDir types"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
