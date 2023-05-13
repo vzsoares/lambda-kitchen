@@ -5,3 +5,5 @@
 .serverless
 .build
 .esbuild
+types
+lib
