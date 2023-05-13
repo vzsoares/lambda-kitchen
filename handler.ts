@@ -1,9 +1,11 @@
 import type { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda';
 
-export const handler = (event: APIGatewayProxyEvent): APIGatewayProxyResult => {
+import helpers from '/opt/nodejs/lambda-layer/';
+
+export const handler = async (
+  event: APIGatewayProxyEvent,
+): Promise<APIGatewayProxyResult> => {
   const queries = JSON.stringify(event.queryStringParameters);
-  return {
-    statusCode: 200,
-    body: JSON.stringify({ queries: `${queries}`, hi: 'hello' }),
-  };
+
+  return helpers.response(200, { hi: 'hello', queries: `${queries}` });
 };

@@ -13,6 +13,7 @@ provider:
     WEATHER: ${ssm:/${sls:stage}/WEATHER}
   httpApi:
     cors: true
+  #TODO add actual layer (use latest layer plugin)
 
 functions:
   handler:
@@ -20,12 +21,14 @@ functions:
     events:
       - httpApi:
           path: /hello
-          method: get
+          method: GET
 
 custom:
   esbuild:
     bundle: true
     minify: true
+    external:
+      - /opt/*
   customDomain:
     domainName: 'api.not-too-powerful.zenhalab.com'
     stage: ${sls:stage}
@@ -38,6 +41,6 @@ custom:
 
 plugins:
   - serverless-esbuild
-  - serverless-offline
   - serverless-domain-manager
   - serverless-deployment-bucket
+  - serverless-offline

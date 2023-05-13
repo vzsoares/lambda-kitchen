@@ -10,7 +10,7 @@
     "prettier-format": "prettier --config ./.prettierrc.yml --ignore-unknown --ignore-path ./.gitignore --write .",
     "prettier-check": "prettier --config ./.prettierrc.yml --ignore-unknown --ignore-path ./.gitignore --check .",
     "check-types": "tsc --project ./tsconfig.json --noemit && echo 'Types are valid ✔︎'",
-    "debug": "sls offline start --stage dev --reloadHandler",
+    "debug": "sls offline start --stage dev",
     "debug:prod": "sls offline start --stage prod --reloadHandler",
     "deploy": "sls deploy --stage dev",
     "deploy:prod": "sls deploy --stage prod",
