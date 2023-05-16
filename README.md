@@ -86,4 +86,9 @@ iam:
 
 ## Links
 
-- organize lambdas : https://aws.amazon.com/blogs/compute/best-practices-for-organizing-larger-serverless-applications/
+- organize lambdas: https://aws.amazon.com/blogs/compute/best-practices-for-organizing-larger-serverless-applications/
+
+- typescript power-tools: https://aws.amazon.com/blogs/compute/simplifying-serverless-best-practices-with-aws-lambda-powertools-for-typescript/
+
+- middlewares?: https://startup-cto.net/simplify-aws-lambda-functions-with-middleware/ ,
+  https://github.com/siroop-ch/nodejs-lambda-middleware , https://dbartholomae.github.io/lambda-middleware/
