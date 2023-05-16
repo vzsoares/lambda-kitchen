@@ -6077,6 +6077,13 @@ serverless-esbuild@^1.43.1:
     ramda "^0.28.0"
     semver "^7.3.8"
 
+serverless-latest-layer-version@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/serverless-latest-layer-version/-/serverless-latest-layer-version-2.1.2.tgz#82261377f8705e62eaf9ca4a015389684df2b6ec"
+  integrity sha512-/Rttr9a5KYornkaPqd35j9JXNevP1Li3lnTjLIg+D0/FwSanJJJJ4I+GaTNOG8qkG9ZaSTecN4GSzrYXsGNBKA==
+  dependencies:
+    traverse "^0.6.6"
+
 serverless-offline@^12.0.4:
   version "12.0.4"
   resolved "https://registry.yarnpkg.com/serverless-offline/-/serverless-offline-12.0.4.tgz#93f60be0423867a5ebcf1cbc8d278e7bfa24e210"

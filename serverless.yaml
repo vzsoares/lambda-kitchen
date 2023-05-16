@@ -13,7 +13,8 @@ provider:
     WEATHER: ${ssm:/${sls:stage}/WEATHER}
   httpApi:
     cors: true
-  #TODO add actual layer (use latest layer plugin)
+  layers:
+    - arn:aws:lambda:us-east-1:355738159777:layer:layerHelpers:latest
 
 functions:
   handler:
@@ -43,4 +44,5 @@ plugins:
   - serverless-esbuild
   - serverless-domain-manager
   - serverless-deployment-bucket
+  - serverless-latest-layer-version
   - serverless-offline
