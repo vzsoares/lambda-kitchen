@@ -10,6 +10,22 @@
 
 > <p align="center">what's cooking? lambdas!</p>
 
+## Available Lambdas/Layers
+
+They are separated by branches
+
+### Lambdas:
+
+- [Typescript/Serverless](https://github.com/vzsoares/lambda-kitchen)
+
+  > this branch
+
+- [Typescript/Zip](https://github.com/vzsoares/lambda-kitchen)
+
+### Layers:
+
+- [Typescript/Serverless](https://github.com/vzsoares/lambda-kitchen/tree/lambda-layer-utils)
+
 ## How to run:
 
 env:
@@ -25,7 +41,15 @@ TODO=TODO
 - `yarn install`
 - develop locally `yarn debug`
 
-### Serverless creates one bucket for each lambda
+---
+
+## Useful stuff:
+
+<br/>
+
+### Use one bucket for all lambdas
+
+by default serverless create one bucket for each lambda, and thats a problem because the account bucket limit is 100 by default
 
 [plugin: serverless-deployment-bucket](https://www.serverless.com/plugins/serverless-deployment-bucket)
 
@@ -35,7 +59,7 @@ TODO=TODO
 
 [post#](https://www.serverless.com/blog/serverless-api-gateway-domain/)
 
-### Stage base path e.g www.domain/`dev`/images
+to stage path e.g www.domain/`dev`/images
 
 Configure serverless-domain-manager config `basePath` to '${sls:stage}/'
 
