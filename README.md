@@ -92,3 +92,5 @@ iam:
 
 - middlewares?: https://startup-cto.net/simplify-aws-lambda-functions-with-middleware/ ,
   https://github.com/siroop-ch/nodejs-lambda-middleware , https://dbartholomae.github.io/lambda-middleware/
+
+- memory optimization: https://theburningmonk.com/2020/03/how-to-optimize-lambda-memory-size-during-ci-cd-pipeline/ , https://medium.com/geekculture/pick-the-right-memory-size-for-your-aws-lambda-functions-682394aa4b21
