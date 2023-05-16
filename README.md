@@ -20,7 +20,7 @@ They are separated by branches
 
   > this branch
 
-- [Typescript/Zip](https://github.com/vzsoares/lambda-kitchen)
+- [Typescript/Zip](https://github.com/vzsoares/lambda-kitchen/tree/lambda-zip-typescript)
 
 ### Layers:
 
