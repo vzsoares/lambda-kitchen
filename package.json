@@ -1,5 +1,5 @@
 {
-  "name": "lambda-typescript",
+  "name": "lambda-layer-utils-typescript",
   "version": "0.1.0",
   "description": "",
   "main": "lib/nodejs/helpers/index.js",
@@ -11,10 +11,8 @@
     "prettier-format": "prettier --config ./.prettierrc.yml --ignore-unknown --ignore-path ./.gitignore --write .",
     "prettier-check": "prettier --config ./.prettierrc.yml --ignore-unknown --ignore-path ./.gitignore --check .",
     "check-types": "tsc --project ./tsconfig.json --noemit && echo 'Types are valid ✔︎'",
-    "debug": "sls offline start --stage dev --reloadHandler",
-    "debug:prod": "sls offline start --stage prod --reloadHandler",
-    "deploy": "sls deploy --stage dev",
-    "deploy:prod": "sls deploy --stage prod",
+    "deploy": "bash deploy.sh dev",
+    "deploy:prod": "bash deploy.sh dev prod",
     "prepare": "husky install",
     "postinstall": "bash prepare_local.sh"
   },
@@ -44,8 +42,6 @@
     "lint-staged": "^13.2.2",
     "prettier": "^2.8.8",
     "serverless": "^3.30.1",
-    "serverless-esbuild": "^1.43.1",
-    "serverless-offline": "^12.0.4",
     "typescript": "^5.0.4"
   }
 }
