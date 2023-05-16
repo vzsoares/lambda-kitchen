@@ -39,6 +39,25 @@ TODO=TODO
 
 Configure serverless-domain-manager config `basePath` to '${sls:stage}/'
 
+### Environment variables:
+
+The best way is to use aws [SSM](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html), [see also](https://www.serverless.com/framework/docs/providers/aws/guide/variables#reference-variables-using-the-ssm-parameter-store)
+<br/>
+And follow this pattern in serverless.yml
+
+```
+    MY_VAR: ${ssm:/${sls:stage}/MY_VAR}
+
+    # in runtime it would look like
+    MY_VAR: /dev/MY_VAR
+```
+
+> note the sls:stage, witch guarantees staging
+
+> note that ssm var work like paths so they always start with a forward slash (/)
+
+to use it just do process.env.$MY_VAR
+
 ## Links
 
 - organize lambdas : https://aws.amazon.com/blogs/compute/best-practices-for-organizing-larger-serverless-applications/
