@@ -1,3 +1,18 @@
+## This is $Helper layer
+
+change `helper` for your projects name, it must be unique among your layers.
+<br/>
+<br/>
+change it in:
+
+- [ ] serverless.yaml
+- [ ] package.json
+- [ ] deploy.sh
+
+
+## Usage:
+
+import this layer locally and remotely with `/opt/nodejs/$layerName`
 ## How to run:
 
 env:
@@ -11,4 +26,3 @@ TODO=TODO
   - run `aws configure`
     > - multiple accounts? [READ](https://www.serverless.com/framework/docs/providers/aws/guide/credentials/)
 - `yarn install`
-- develop locally `yarn debug`

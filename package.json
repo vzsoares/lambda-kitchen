@@ -16,7 +16,7 @@
     "deploy": "sls deploy --stage dev",
     "deploy:prod": "sls deploy --stage prod",
     "prepare": "husky install",
-    "gen-types": "npx -p typescript tsc index.ts --declaration --allowJs --emitDeclarationOnly --outDir types"
+    "postinstall": "bash prepare_local.sh"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
