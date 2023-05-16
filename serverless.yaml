@@ -6,4 +6,4 @@ provider:
 
 layers:
   layerHelpers:
-    path: dist
+    path: lib
