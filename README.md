@@ -45,11 +45,11 @@ The best way is to use aws [SSM](https://docs.aws.amazon.com/systems-manager/lat
 <br/>
 And follow this pattern in serverless.yml
 
-```
+```yaml
     MY_VAR: ${ssm:/${sls:stage}/MY_VAR}
 
     # in runtime it would look like
-    MY_VAR: /dev/MY_VAR
+    MY_VAR:  ${ssm:/dev/MY_VAR}
 ```
 
 > note the sls:stage, witch guarantees staging
@@ -57,6 +57,32 @@ And follow this pattern in serverless.yml
 > note that ssm var work like paths so they always start with a forward slash (/)
 
 to use it just do process.env.$MY_VAR
+
+### Disable cloudwatch/Manage permissions
+
+Theres no cli option or config to that, but the best workaround is to manipulate permissions.
+<br/>
+You either just disallow the cloudwatch or only allow lambda creation.
+<br/>
+
+You could create a aws `role` or declare the policie directly on the yaml
+
+example:
+
+```yaml
+#only allow functions
+iam:
+  role:
+    statements:
+      - Effect: 'Allow'
+        Action:
+          - 'lambda:InvokeFunction'
+        Resource: '*'
+```
+
+[Policie to disallow cloudwatch](https://stackoverflow.com/questions/51166504/disable-cloudwatch-to-monitor-logs-for-lambda-function)
+
+[docs](https://www.serverless.com/framework/docs/providers/aws/guide/iam)
 
 ## Links
 
