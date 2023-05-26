@@ -21,9 +21,6 @@ node ./esbuild.js
 mkdir -p "$FINAL_PATH" && cp -r dist/* "$FINAL_PATH" && \
 (cd "$FINAL_PATH" && npm init -y 1> /dev/null)
 
-# npm sls deploy --stage $STAGE --aws-profile $AWS_PROFILE
+npm sls deploy --stage $STAGE --aws-profile $AWS_PROFILE
 
 echo "SUCCESS"
-
-# TODO sudo ln -sf 'here' /opt/nodejs
-# TODO gen types
