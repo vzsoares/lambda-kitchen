@@ -43,6 +43,56 @@ TODO=TODO
 
 ---
 
+## Organize your Lambdas
+
+The way i suggest you to organize your lambdas is pretty simple
+
+Basically is not a good idea to have to much code on one lambda, because that will increase its size and it will take longer to start up.
+
+But its also a torture to have many repositories related to the same this.
+
+So here the solution, following this marketplace example
+
+### Marketplace microservice example:
+
+req example: api.marketplace.domain/auth/validateToken
+
+```yaml
+.api.marketplace/ #repoName=subdomain
+├── auth/ #foldersName=subpath >>each are a lambda
+│   ├── actions/
+│   │   ├── validateToken.ts #actionName=path
+│   │   └── createToken.ts
+│   ├── tsconfig.json
+│   ├── esbuild.json
+│   ├── pretierrc.json
+│   ├── eslint.json
+│   ├── .gitignore
+│   ├── deploy_prod.sh
+│   ├── deploy_dev.sh
+│   └── package.json
+├── payments/
+│   ├── actions/
+│   │   ├── paymentIntention.ts
+│   │   └── confirmPayment.ts
+│   └── ...rest
+└── products/
+    ├── actions/
+    │   ├── getProducts.ts
+    │   └── getProductDetail.ts
+    └── ...rest
+```
+
+<img src="assets/domain-folder.jpg" style="max-width:500px;"/>
+
+Breaking it down, the repository name will represent the `service name` and will represent the _subdomain_ of our end api url
+
+Then inside the repo we'll have folders that each are a lambda related to the service. So each one will have its own deploy and will represent different functions on aws
+<br/>
+The folder represents the _subpath_ and its name represents wat the actions inside of it are related to
+
+Finally for the actions it basically is a function and its name relates to the _path_, it should be simple and do one thing well
+
 ## Useful stuff:
 
 <br/>
