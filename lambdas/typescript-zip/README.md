@@ -1,14 +1,7 @@
-## How to run:
+# typescript-zip
 
-env:
+This library was generated with [Nx](https://nx.dev).
 
-```
-TODO=TODO
-```
+## Running unit tests
 
-- configure aws credentials
-  - install [aws-cli](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html)
-  - run `aws configure`
-    > - multiple accounts? [READ](https://www.serverless.com/framework/docs/providers/aws/guide/credentials/)
-- `yarn install`
-- develop locally `yarn debug`
+Run `nx test typescript-zip` to execute the unit tests via [Jest](https://jestjs.io).

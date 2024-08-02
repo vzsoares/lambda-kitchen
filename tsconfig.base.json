@@ -15,9 +15,11 @@
         "skipDefaultLibCheck": true,
         "baseUrl": ".",
         "paths": {
+            "typescript-layer": ["lambdas/typescript-layer/src/index.ts"],
             "typescript-serverless": [
                 "lambdas/typescript-serverless/src/index.ts"
-            ]
+            ],
+            "typescript-zip": ["lambdas/typescript-zip/src/index.ts"]
         }
     },
     "exclude": ["node_modules", "tmp"]
