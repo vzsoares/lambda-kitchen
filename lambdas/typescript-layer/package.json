@@ -13,8 +13,7 @@
         "check-types": "tsc --project ./tsconfig.json --noemit && echo 'Types are valid ✔︎'",
         "deploy": "bash deploy.sh dev",
         "deploy:prod": "bash deploy.sh dev prod",
-        "prepare": "husky install",
-        "postinstall": "bash prepare_local.sh"
+        "prepare": "husky install"
     },
     "lint-staged": {
         "*.{ts,tsx,js,jsx}": "yarn lint-fix",

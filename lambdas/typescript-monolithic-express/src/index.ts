@@ -1,1 +1,3 @@
-export * from './lib/typescript-monolithic-express';
+import { app } from "./app";
+
+export const handler = serverless(app);
