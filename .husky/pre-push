@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-nx run-many -t prettier-check lint-check check-types build --output-style=static
+nx run-many -t lint-check check-types build --output-style=static

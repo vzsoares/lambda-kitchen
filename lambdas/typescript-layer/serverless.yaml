@@ -1,9 +1,9 @@
 service: layer-helpers
 
 provider:
-  name: aws
-  runtime: nodejs18.x
+    name: aws
+    runtime: nodejs18.x
 
 layers:
-  layerHelpers:
-    path: lib
+    layerHelpers:
+        path: lib
