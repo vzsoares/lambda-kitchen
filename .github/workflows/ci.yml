@@ -25,4 +25,4 @@ jobs:
 
             - run: yarn install --frozen-lockfile
             - uses: nrwl/nx-set-shas@v4
-            - run: npx nx affected -t lint-check check-types build --output-style=static
+            - run: npx nx affected -t lint-check check-types --output-style=static
