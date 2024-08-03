@@ -5,20 +5,15 @@
 
 <p align="center"><img src="assets/a-gif-wow.gif"/></p>
 
-</br>
-</br>
-
-> <p align="center">what's cooking? lambdas!</p>
+<p align="center">what's cooking? lambdas!</p>
 
 ## Available Lambdas/Layers
 
-They are separated by branches
+see at **`lambdas`** folder
 
 ### Lambdas:
 
 - [Typescript/Serverless](https://github.com/vzsoares/lambda-kitchen)
-
-  > this branch
 
 - [Typescript/Zip](https://github.com/vzsoares/lambda-kitchen/tree/lambda-zip-typescript)
 
@@ -58,7 +53,7 @@ So here the solution, following this marketplace example
 req example: api.marketplace.domain/auth/validateToken
 
 ```yaml
-.api.marketplace/ #repoName=subdomain
+.api.store/ #repoName=subdomain
 ├── auth/ #foldersName=subpath >>each are a lambda
 │   ├── actions/
 │   │   ├── validateToken.ts #actionName=path
@@ -94,8 +89,6 @@ The folder represents the _subpath_ and its name represents wat the actions insi
 Finally for the actions it basically is a function and its name relates to the _path_, it should be simple and do one thing well
 
 ## Useful stuff:
-
-<br/>
 
 ### Use one bucket for all lambdas
 
