@@ -1,0 +1,9 @@
+{
+    "name": "typescript-zip",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "lambdas/typescript-zip/src",
+    "projectType": "library",
+    "tags": [],
+    "// targets": "to see all targets run: nx show project typescript-zip --web",
+    "targets": {}
+}
