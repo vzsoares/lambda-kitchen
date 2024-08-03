@@ -16,6 +16,9 @@
         "baseUrl": ".",
         "paths": {
             "typescript-layer": ["lambdas/typescript-layer/src/index.ts"],
+            "typescript-monolithic-express": [
+                "lambdas/typescript-monolithic-express/src/index.ts"
+            ],
             "typescript-serverless": [
                 "lambdas/typescript-serverless/src/index.ts"
             ],
