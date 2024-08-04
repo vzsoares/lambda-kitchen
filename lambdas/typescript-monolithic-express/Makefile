@@ -14,8 +14,7 @@ AWK := awk
 ##@
 
 serve: ##@ Start local api
-> @SAM_CLI_BETA_ESBUILD=1 ${SAM} local start-api --beta-features --debug
-
+> @SAM_CLI_BETA_ESBUILD=1 ${SAM} local start-api --beta-features --debug --skip-pull-image
 
 ##@
 ##@ Misc commands
