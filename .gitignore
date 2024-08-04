@@ -51,3 +51,6 @@ Thumbs.db
 types
 lib
 .idea
+
+**/.aws-sam
+
