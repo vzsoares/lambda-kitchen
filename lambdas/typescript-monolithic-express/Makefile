@@ -31,5 +31,5 @@ help: ##@ (Default) This help menu
 		else if($$1 == "") \
 			printf "     %-20s%s\n", "", $$2; \
 		else \
-			printf "\n    \033[34m%-20s\033[0m %s\n", $$1, $$2; \
+        printf "\n    \033[38;2;156;207;216m%-20s\033[0m %s\n", $$1, $$2; \
 	}'
