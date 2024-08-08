@@ -9,22 +9,36 @@
         "experimentalDecorators": true,
         "importHelpers": true,
         "esModuleInterop": true,
+        "resolveJsonModule": true,
         "target": "es2015",
         "module": "esnext",
-        "lib": ["es2020", "dom"],
+        "lib": [
+            "es2020",
+            "dom"
+        ],
         "skipLibCheck": true,
         "skipDefaultLibCheck": true,
         "baseUrl": ".",
         "paths": {
-            "typescript-layer": ["lambdas/typescript-layer/src/index.ts"],
+            "typescript-function-based": [
+                "lambdas/typescript-microservice-handlers/src/index.ts"
+            ],
+            "typescript-layer": [
+                "lambdas/typescript-layer/src/index.ts"
+            ],
             "typescript-monolithic-express": [
                 "lambdas/typescript-monolithic-express/src/index.ts"
             ],
             "typescript-serverless": [
                 "lambdas/typescript-serverless/src/index.ts"
             ],
-            "typescript-zip": ["lambdas/typescript-zip/src/index.ts"]
+            "typescript-zip": [
+                "lambdas/typescript-zip/src/index.ts"
+            ]
         }
     },
-    "exclude": ["node_modules", "tmp"]
+    "exclude": [
+        "node_modules",
+        "tmp"
+    ]
 }
