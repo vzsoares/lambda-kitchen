@@ -20,14 +20,14 @@
             "typescript-function-based": [
                 "lambdas/typescript-microservice-handlers/src/index.ts"
             ],
-            "typescript-layer": ["lambdas/typescript-layer/src/index.ts"],
+            "typescript-layer": ["lambdas/typescript-layer/index.ts"],
             "typescript-monolithic-express": [
                 "lambdas/typescript-monolithic-express/src/index.ts"
             ],
             "typescript-serverless": [
                 "lambdas/typescript-serverless/src/index.ts"
             ],
-            "typescript-zip": ["lambdas/typescript-zip-cli/src/index.ts"]
+            "typescript-zip": ["lambdas/typescript-zip-cli/handler.ts"]
         }
     },
     "exclude": ["node_modules", "tmp"]
