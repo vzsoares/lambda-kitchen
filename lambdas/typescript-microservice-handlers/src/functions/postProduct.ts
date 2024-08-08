@@ -2,7 +2,9 @@ import type { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda';
 import db from '../../db.stub.json';
 import { writeFileSync } from 'fs';
 
-export function handler(event: APIGatewayProxyEvent): APIGatewayProxyResult {
+export async function handler(
+    event: APIGatewayProxyEvent,
+): Promise<APIGatewayProxyResult> {
     const product = JSON.parse(event.body ?? '""');
 
     if (!product) return { statusCode: 404, body: '' };
