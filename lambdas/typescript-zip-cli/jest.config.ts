@@ -10,5 +10,5 @@ export default {
         ],
     },
     moduleFileExtensions: ['ts', 'js', 'html'],
-    coverageDirectory: '../../coverage/lambdas/typescript-zip',
+    coverageDirectory: '../../coverage/lambdas/typescript-zip-cli',
 };
