@@ -1,21 +1,88 @@
 {
-  "extends": "nx/presets/npm.json",
-  "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "namedInputs": {
-    "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
-  },
-  "plugins": [
-    {
-      "plugin": "@nx/eslint/plugin",
-      "options": {
-        "targetName": "lint"
-      }
+    "extends": "nx/presets/npm.json",
+    "$schema": "./node_modules/nx/schemas/nx-schema.json",
+    "namedInputs": {
+        "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
     },
-    {
-      "plugin": "@nx/jest/plugin",
-      "options": {
-        "targetName": "test"
-      }
+    "workspaceLayout": {
+        "appsDir": "lambdas",
+        "libsDir": "libs"
+    },
+    "defaultBase": "origin/main",
+    "targetDefaults": {
+        "build": {
+            "cache": true,
+            "configurations": {
+                "prod": {
+                    "args": ["STAGE=prod"]
+                },
+                "dev": {
+                    "args": ["STAGE=dev"]
+                }
+            }
+        },
+        "test": {
+            "cache": true
+        },
+        "lint": {
+            "cache": true
+        },
+        "deploy": {
+            "cache": false,
+            "dependsOn": ["build", "test", "lint"],
+            "configurations": {
+                "prod": {
+                    "args": ["STAGE=prod"]
+                },
+                "dev": {
+                    "args": ["STAGE=dev"]
+                }
+            }
+        }
+    },
+    "plugins": [
+        {
+            "plugin": "@nx/eslint/plugin",
+            "options": {
+                "targetName": "lint"
+            }
+        },
+        {
+            "plugin": "@nx/jest/plugin",
+            "options": {
+                "targetName": "test"
+            }
+        }
+    ],
+    "pluginsConfig": {
+        "@nx/js": {
+            "projectsAffectedByDependencyUpdates": "auto"
+        }
+    },
+    "tasksRunnerOptions": {
+        "default": {
+            "runner": "@pellegrims/nx-remotecache-s3",
+            "options": {
+                "cacheableOperations": ["build", "test", "lint", "e2e"],
+                "bucket": "zenhalab-artifacts-dev",
+                "name": "zenhalab-artifacts-dev",
+                "prefix": "cache/nx/microservices/",
+                "region": "us-east-1",
+                "forcePathStyle": true,
+                "readOnly": false
+            }
+        },
+        "prod": {
+            "runner": "@pellegrims/nx-remotecache-s3",
+            "options": {
+                "cacheableOperations": ["build", "test", "lint", "e2e"],
+                "bucket": "zenhalab-artifacts-prod",
+                "name": "zenhalab-artifacts-prod",
+                "prefix": "cache/nx/microservices/",
+                "region": "us-east-1",
+                "forcePathStyle": true,
+                "readOnly": false
+            }
+        }
     }
-  ]
 }
