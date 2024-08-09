@@ -6,15 +6,12 @@
     "types": "./types/index.d.ts",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "lint-fix": "eslint --config ./.eslintrc.json  --ext .ts,.tsx --fix .",
-        "lint-check": "eslint --config ./.eslintrc.json --max-warnings=0 --ext .ts,.tsx .",
         "prettier-format": "prettier --ignore-unknown --write .",
         "prettier-check": "prettier --ignore-unknown --check .",
         "check-types": "tsc --project ./tsconfig.json --noemit && echo 'Types are valid ✔︎'",
         "deploy": "bash deploy.sh dev",
         "deploy:prod": "bash deploy.sh dev prod",
-        "prepare": "husky install",
-        "postinstall": "bash prepare_local.sh"
+        "prepare": "husky install"
     },
     "lint-staged": {
         "*.{ts,tsx,js,jsx}": "yarn lint-fix",
