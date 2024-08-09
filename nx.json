@@ -1,8 +1,16 @@
 {
+    "pluginsConfig": {
+        "@nx/js": {
+            "projectsAffectedByDependencyUpdates": "auto"
+        }
+    },
     "extends": "nx/presets/npm.json",
     "$schema": "./node_modules/nx/schemas/nx-schema.json",
     "namedInputs": {
-        "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
+        "sharedGlobals": [
+            "{workspaceRoot}/.github/workflows/ci.yml",
+            "{workspaceRoot}/go.work"
+        ]
     },
     "workspaceLayout": {
         "appsDir": "lambdas",
@@ -52,13 +60,9 @@
             "options": {
                 "targetName": "test"
             }
-        }
+        },
+        "@nx-go/nx-go"
     ],
-    "pluginsConfig": {
-        "@nx/js": {
-            "projectsAffectedByDependencyUpdates": "auto"
-        }
-    },
     "tasksRunnerOptions": {
         "default": {
             "runner": "@pellegrims/nx-remotecache-s3",
