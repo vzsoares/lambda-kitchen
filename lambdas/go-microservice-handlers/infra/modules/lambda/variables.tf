@@ -1,3 +1,7 @@
+variable "gateway_id" {
+  type = string
+}
+
 variable "lambda_iam_arn" {
   type = string
 }

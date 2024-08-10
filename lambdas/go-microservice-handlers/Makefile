@@ -9,6 +9,7 @@ AWS ?= aws
 SAM ?= sam
 TERRAFORM ?= terraform
 AWK ?= awk
+GO ?= go
 
 STAGE ?= dev
 
@@ -24,13 +25,10 @@ SAM_TERRAFORM_ROOT=--terraform-project-root-path ../../../
 
 build: ##@ Build package
 > @echo "Building for stage: ${STAGE}"
-# clean old
-> @rm -rf ./dist/*
 # build new raw
-> @node ./esbuild.js
+> @cd ./functions/get-product && GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -o bootstrap -tags lambda.norpc
 # zip
-> @mkdir ./dist/zip
-> @zip -X -r -j ./dist/zip/function.zip ./dist/tmp/*
+> @cd ./functions/get-product && zip -X -r -j function.zip bootstrap
 
 ##@
 ##@ Run local SAM
