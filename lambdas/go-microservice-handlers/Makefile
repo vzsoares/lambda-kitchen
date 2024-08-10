@@ -35,15 +35,18 @@ build: ##@ Build package
 ##@
 
 sam-build: ##@ Build for sam
-> @cd ${WD_${STAGE}} && ${SAM} build ${SAM_COMMON_AGRS} --skip-prepare-infra ${SAM_TERRAFORM_ROOT}
-
-prepare-local: ##@ Prepare local
-    ##@ - run before everything
-    ##@ - run after changing any infra/
-> @cd ${WD_${STAGE}} && ${TERRAFORM} init && ${SAM} build ${SAM_COMMON_AGRS} ${SAM_TERRAFORM_ROOT}
+> @make build && cd ${WD_${STAGE}} && ${SAM} build ${SAM_COMMON_AGRS} --skip-prepare-infra ${SAM_TERRAFORM_ROOT}
 
 start: ##@ Start local api
-> @npx nodemon -e go --signal SIGTERM --exec 'make' sam-build & (cd ${WD_${STAGE}} && ${SAM} local start-api --debug --skip-pull-image ${SAM_COMMON_AGRS})
+       ##@ - if this is your first run then
+       ##@ run make tf-init && make sam-build
+> @make watch-build start-api -j
+
+start-api:
+> @cd ${WD_${STAGE}} && ${SAM} local start-api --debug --skip-pull-image ${SAM_COMMON_AGRS}
+
+watch-build:
+> @npx nodemon -e go --signal SIGTERM --exec 'make' sam-build
 
 ##@
 ##@ Deployment
@@ -51,6 +54,7 @@ start: ##@ Start local api
 
 deploy: ##@ Deploy to current $STAGE
 > @echo "Deploying for stage: ${STAGE}"
+> @make build
 > @cd ${WD_${STAGE}} && ${TERRAFORM} init && ${TERRAFORM} apply -auto-approve
 
 ##@
