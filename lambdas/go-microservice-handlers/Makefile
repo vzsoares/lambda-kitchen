@@ -34,13 +34,16 @@ build: ##@ Build package
 ##@ Run local SAM
 ##@
 
+sam-build: ##@ Build for sam
+> @cd ${WD_${STAGE}} && ${SAM} build ${SAM_COMMON_AGRS} --skip-prepare-infra ${SAM_TERRAFORM_ROOT}
+
 prepare-local: ##@ Prepare local
     ##@ - run before everything
     ##@ - run after changing any infra/
 > @cd ${WD_${STAGE}} && ${TERRAFORM} init && ${SAM} build ${SAM_COMMON_AGRS} ${SAM_TERRAFORM_ROOT}
 
 start: ##@ Start local api
-> @node esbuild.js --watch & (cd ${WD_${STAGE}} && ${SAM} local start-api --debug --skip-pull-image ${SAM_COMMON_AGRS})
+> @npx nodemon -e go --signal SIGTERM --exec 'make' sam-build & (cd ${WD_${STAGE}} && ${SAM} local start-api --debug --skip-pull-image ${SAM_COMMON_AGRS})
 
 ##@
 ##@ Deployment

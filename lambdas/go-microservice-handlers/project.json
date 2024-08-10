@@ -6,15 +6,17 @@
     "tags": [],
     "targets": {
         "build": {
-            "executor": "@nx-go/nx-go:build",
+            "executor": "nx:run-commands",
             "options": {
-                "main": "{projectRoot}/main.go"
+                "cwd": "{projectRoot}",
+                "command": "make build"
             }
         },
         "serve": {
-            "executor": "@nx-go/nx-go:serve",
+            "executor": "nx:run-commands",
             "options": {
-                "main": "{projectRoot}/main.go"
+                "cwd": "{projectRoot}",
+                "command": "make start"
             }
         },
         "test": {

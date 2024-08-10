@@ -22,7 +22,8 @@ module "get-product-lambda" {
   lambda_iam_arn        = data.aws_iam_role.role.arn
   gateway_route_key     = "GET /go-microservice-handlers/get-product"
   lambda_base_name      = "go-microservice-handlers-get-product"
-  filepath              = "../../../functions/get-product/function.zip"
+  filepath              = "../../../functions/get-product"
+  filename              = "function.zip"
   s3_prefix             = "build/lambda/lambda-kitchen"
   s3_bucket             = "zenhalab-artifacts-${local.stage}"
 }

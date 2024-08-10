@@ -2,6 +2,10 @@ variable "gateway_id" {
   type = string
 }
 
+variable "filename" {
+  type = string
+}
+
 variable "gateway_route_key" {
   type = string
 }
