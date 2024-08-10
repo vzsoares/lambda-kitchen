@@ -9,6 +9,6 @@ resource "aws_apigatewayv2_integration" "gateway_integration" {
 resource "aws_apigatewayv2_route" "gateway_route" {
   api_id = var.gateway_id
 
-  route_key = "GET /go-microservice-handlers/get-product"
+  route_key = var.gateway_route_key
   target    = "integrations/${aws_apigatewayv2_integration.gateway_integration.id}"
 }
