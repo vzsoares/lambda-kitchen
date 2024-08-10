@@ -7,9 +7,18 @@
     "extends": "nx/presets/npm.json",
     "$schema": "./node_modules/nx/schemas/nx-schema.json",
     "namedInputs": {
+        "default": ["sharedGlobals"],
+        "prod": [
+            "default",
+            "!{projectRoot}/**/?(*.)+(spec|test).ts",
+            "!{projectRoot}/**/*_test.go"
+        ],
         "sharedGlobals": [
             "{workspaceRoot}/.github/workflows/ci.yml",
-            "{workspaceRoot}/go.work"
+            "{workspaceRoot}/go.work",
+            "{projectRoot}/**/*",
+            "{workspaceRoot}/.gitignore",
+            "{projectRoot}/**/*.ts"
         ]
     },
     "workspaceLayout": {
@@ -20,6 +29,11 @@
     "targetDefaults": {
         "build": {
             "cache": true,
+            "outputs": [
+                "{projectRoot}/dist",
+                "{projectRoot}/functions/**/function.zip",
+                "{projectRoot}/functions/**/bootstrap"
+            ],
             "configurations": {
                 "prod": {
                     "args": ["STAGE=prod"]
