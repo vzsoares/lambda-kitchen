@@ -40,7 +40,7 @@ build-%:
 ##@
 
 sam-build: ##@ Build for sam
-> @make build && cd ${WD_${STAGE}} && ${SAM} build ${SAM_COMMON_AGRS} --skip-prepare-infra ${SAM_TERRAFORM_ROOT}
+> @make build && cd ${WD_${STAGE}} && ${SAM} build ${SAM_COMMON_AGRS} ${SAM_TERRAFORM_ROOT}
 
 start: ##@ Start local api
        ##@ - if this is your first run then
