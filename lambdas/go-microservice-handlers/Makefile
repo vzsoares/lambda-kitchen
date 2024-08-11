@@ -40,7 +40,7 @@ build-%:
 ##@
 
 sam-build: ##@ Build for sam
-> @make build && cd ${WD_${STAGE}} && ${SAM} build ${SAM_COMMON_AGRS} ${SAM_TERRAFORM_ROOT}
+> @make build && cd ${WD_${STAGE}} && ${SAM} build ${SAM_COMMON_AGRS} ${SAM_TERRAFORM_ROOT} ${EXTRA}
 
 start: ##@ Start local api
        ##@ - if this is your first run then
@@ -51,7 +51,7 @@ start-api:
 > @cd ${WD_${STAGE}} && ${SAM} local start-api --debug --skip-pull-image ${SAM_COMMON_AGRS}
 
 watch-build:
-> @npx nodemon -e go --signal SIGTERM --exec 'make' sam-build
+> @npx nodemon -e go --signal SIGTERM --exec 'make' sam-build EXTRA=--skip-prepare-infra
 
 ##@
 ##@ Deployment
