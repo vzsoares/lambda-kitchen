@@ -10,6 +10,9 @@ SAM ?= sam
 TERRAFORM ?= terraform
 AWK ?= awk
 GO ?= go
+MAKE ?= make
+
+FUNCTIONS := get-product put-product
 
 STAGE ?= dev
 
@@ -25,10 +28,12 @@ SAM_TERRAFORM_ROOT=--terraform-project-root-path ../../../
 
 build: ##@ Build package
 > @echo "Building for stage: ${STAGE}"
-# build new raw
-> @cd ./functions/get-product && GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -o bootstrap -tags lambda.norpc
-# zip
-> @cd ./functions/get-product && zip -X -r -j function.zip bootstrap
+> @${MAKE} $(foreach function,${FUNCTIONS}, build-${function}) -j
+
+build-%:
+> @echo "Building $*"
+> @cd ./functions/$* && GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -o bootstrap -tags lambda.norpc
+> @cd ./functions/$* && zip -X -r -j function.zip bootstrap
 
 ##@
 ##@ Run local SAM

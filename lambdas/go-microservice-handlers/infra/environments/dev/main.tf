@@ -28,3 +28,16 @@ module "get-product-lambda" {
   s3_bucket             = "zenhalab-artifacts-${local.stage}"
 }
 
+module "put-product-lambda" {
+  source                = "../../modules/lambda"
+  gateway_id            = module.api_gateway.id
+  gateway_execution_arn = module.api_gateway.execution_arn
+  stage                 = local.stage
+  lambda_iam_arn        = data.aws_iam_role.role.arn
+  gateway_route_key     = "PUT /go-microservice-handlers/put-product"
+  lambda_base_name      = "go-microservice-handlers-put-product"
+  filepath              = "../../../functions/put-product"
+  filename              = "function.zip"
+  s3_prefix             = "build/lambda/lambda-kitchen"
+  s3_bucket             = "zenhalab-artifacts-${local.stage}"
+}
