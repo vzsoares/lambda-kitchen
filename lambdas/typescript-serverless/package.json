@@ -4,7 +4,7 @@
     "description": "",
     "main": "handler.ts",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
+        
         "lint-fix": "eslint --config ./.eslintrc.json  --ext .ts,.tsx --fix .",
         "lint-check": "eslint --config ./.eslintrc.json --max-warnings=0 --ext .ts,.tsx .",
         "prettier-format": "prettier --ignore-unknown --write .",
