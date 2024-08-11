@@ -12,7 +12,7 @@ type MemoryStore struct {
 var _ types.Store = (*MemoryStore)(nil)
 
 func NewMemoryStore() *MemoryStore {
-	return &MemoryStore{}
+	return &MemoryStore{store: make(map[string]types.Product)}
 }
 func (s *MemoryStore) Put(p types.Product) error {
 	s.store[p.Id] = p

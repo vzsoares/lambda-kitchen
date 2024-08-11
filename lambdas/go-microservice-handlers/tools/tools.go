@@ -13,12 +13,17 @@ func GatewayResponse(code int, object interface{}) events.APIGatewayV2HTTPRespon
 		return GatewayErrResponse(http.StatusInternalServerError, err.Error())
 	}
 
+	stringified := string(marshalled)
+	if stringified == "null" {
+		stringified = ""
+	}
+
 	return events.APIGatewayV2HTTPResponse{
 		StatusCode: code,
 		Headers: map[string]string{
 			"Content-Type": "application/json",
 		},
-		Body:            string(marshalled),
+		Body:            stringified,
 		IsBase64Encoded: false,
 	}
 }

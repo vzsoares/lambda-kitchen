@@ -16,8 +16,12 @@ func main() {
 }
 
 func handler(ctx context.Context, event events.APIGatewayV2HTTPRequest) (events.APIGatewayV2HTTPResponse, error) {
+	if event.Body == "" {
+		return tools.GatewayErrResponse(400, "No body"), nil
+	}
+
 	product := types.Product{}
-	if err := json.Unmarshal([]byte(event.Body), product); err != nil {
+	if err := json.Unmarshal([]byte(event.Body), &product); err != nil {
 		return tools.GatewayErrResponse(500, err.Error()), nil
 	}
 
