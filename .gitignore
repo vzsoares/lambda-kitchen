@@ -48,7 +48,6 @@ Thumbs.db
 .serverless
 .build
 .esbuild
-types
 lib
 .idea
 
