@@ -33,7 +33,7 @@ build: ##@ Build package
 build-%:
 > @echo "Building $*"
 > @cd ./functions/$* && GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -o bootstrap -tags lambda.norpc
-> @cd ./functions/$* && zip -X -r -j function.zip bootstrap
+> @cd ./functions/$* && zip -X -r -j function.zip bootstrap ../../db.stub.json
 
 ##@
 ##@ Run local SAM

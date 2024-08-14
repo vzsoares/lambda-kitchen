@@ -1,0 +1,502 @@
+[
+    {
+        "Id": "02661ffe-5250-453a-b2ea-c1309bda6dcd",
+        "Name": "Anastomus oscitans",
+        "Price": 542.77
+    },
+    {
+        "Id": "5f1a21e3-ca76-4e36-83c3-59e97d520220",
+        "Name": "Larus dominicanus",
+        "Price": 567.12
+    },
+    {
+        "Id": "370b1636-788d-4e4d-8a03-c1f8ccace454",
+        "Name": "Vulpes cinereoargenteus",
+        "Price": 521.19
+    },
+    {
+        "Id": "a7c80d9e-60d1-4a2c-a16d-25f83736ba6b",
+        "Name": "Plegadis ridgwayi",
+        "Price": 13.04
+    },
+    {
+        "Id": "df4c5b0b-2084-4b8a-b71e-e77273523578",
+        "Name": "Chelodina longicollis",
+        "Price": 101.79
+    },
+    {
+        "Id": "33c0c76c-81d9-415a-b042-e252dc0232ab",
+        "Name": "Oncorhynchus nerka",
+        "Price": 593.38
+    },
+    {
+        "Id": "e3925dbb-39bc-408c-b7c0-ce2a0d40877d",
+        "Name": "Spermophilus lateralis",
+        "Price": 95.16
+    },
+    {
+        "Id": "2113ac4a-b264-44d8-8152-2cc59e3ca23b",
+        "Name": "Ammospermophilus nelsoni",
+        "Price": 985.16
+    },
+    {
+        "Id": "3f9eacc7-d811-4c03-99e9-aeb319ef1eb5",
+        "Name": "Chelodina longicollis",
+        "Price": 72.87
+    },
+    {
+        "Id": "aa97710e-18e2-4698-b9ae-47a3a4399610",
+        "Name": "Junonia genoveua",
+        "Price": 666.17
+    },
+    {
+        "Id": "196e743f-f953-4638-84b6-e3c97e8862f1",
+        "Name": "Microcebus murinus",
+        "Price": 304.89
+    },
+    {
+        "Id": "c2ab2174-47aa-4659-a88a-cf812c4b8779",
+        "Name": "Sylvilagus floridanus",
+        "Price": 762.73
+    },
+    {
+        "Id": "cc953456-f27c-49c7-85bd-9dd656275e6b",
+        "Name": "Butorides striatus",
+        "Price": 216.26
+    },
+    {
+        "Id": "b9bb9caa-b8d5-44db-bde6-2228b0004ce0",
+        "Name": "Lepus arcticus",
+        "Price": 37.75
+    },
+    {
+        "Id": "f9fbee16-6ca7-4074-af6e-d39ce174e098",
+        "Name": "Canis aureus",
+        "Price": 558.98
+    },
+    {
+        "Id": "5efae46f-3056-46ed-8719-7fab0a8948fe",
+        "Name": "Bassariscus astutus",
+        "Price": 651.69
+    },
+    {
+        "Id": "68dde45f-104e-4f83-8103-4a5082dfe3e3",
+        "Name": "Orcinus orca",
+        "Price": 934.63
+    },
+    {
+        "Id": "af3918bb-0919-4d7f-b8b8-24794bb53c49",
+        "Name": "Columba livia",
+        "Price": 320.29
+    },
+    {
+        "Id": "6fe6c0c0-851a-46a2-a63e-c63d0f431c43",
+        "Name": "Ursus americanus",
+        "Price": 177.9
+    },
+    {
+        "Id": "61a4172b-3a5a-4ce8-b221-7dd14b9f80e7",
+        "Name": "Morelia spilotes variegata",
+        "Price": 465.97
+    },
+    {
+        "Id": "f197c868-baff-4682-9102-c2ce5aea82da",
+        "Name": "Rangifer tarandus",
+        "Price": 781.59
+    },
+    {
+        "Id": "b97ff770-02ae-42cf-a731-6cdac7ed771e",
+        "Name": "Pitangus sulphuratus",
+        "Price": 490.59
+    },
+    {
+        "Id": "037098ed-3a13-4ed0-9664-7146cdb4fd80",
+        "Name": "Bubo virginianus",
+        "Price": 87.98
+    },
+    {
+        "Id": "54871062-2844-4b53-9d10-8ff7683c8cc5",
+        "Name": "Vanellus sp.",
+        "Price": 345.31
+    },
+    {
+        "Id": "ac71eab7-7236-45fa-9158-4be38df9b76d",
+        "Name": "Ara ararauna",
+        "Price": 231.58
+    },
+    {
+        "Id": "741b8b9e-5f97-4a42-992e-8e379f0108be",
+        "Name": "Gyps bengalensis",
+        "Price": 361.79
+    },
+    {
+        "Id": "9a255e84-b86b-408a-869a-b05e2ee6c194",
+        "Name": "Ratufa indica",
+        "Price": 534.32
+    },
+    {
+        "Id": "83ed1922-77db-4615-8099-0213539d60bf",
+        "Name": "Madoqua kirkii",
+        "Price": 855.3
+    },
+    {
+        "Id": "7eab9e2a-06c5-445e-b69f-c76e3c123d84",
+        "Name": "Crocuta crocuta",
+        "Price": 617.28
+    },
+    {
+        "Id": "c7aaa342-9189-4fa0-8941-2290ca522cd6",
+        "Name": "unavailable",
+        "Price": 445.94
+    },
+    {
+        "Id": "ac4f8fde-ce8e-41ca-ab7c-720eeea6df3b",
+        "Name": "Bettongia penicillata",
+        "Price": 909.51
+    },
+    {
+        "Id": "0c493096-752a-4028-a56a-5eabb7463817",
+        "Name": "Canis dingo",
+        "Price": 309.25
+    },
+    {
+        "Id": "f6fe2ab9-238f-4713-8811-df17f3310b16",
+        "Name": "Cebus apella",
+        "Price": 105.13
+    },
+    {
+        "Id": "1a91f090-02cb-4d5e-873f-1875ecc46a16",
+        "Name": "Cordylus giganteus",
+        "Price": 570.57
+    },
+    {
+        "Id": "e0652890-6c14-4dbf-91a4-98f7e9d94765",
+        "Name": "Certotrichas paena",
+        "Price": 991.74
+    },
+    {
+        "Id": "81c14d4c-eccb-41fd-881c-b788fb511bb1",
+        "Name": "Dusicyon thous",
+        "Price": 600.84
+    },
+    {
+        "Id": "f68cdb10-2d15-403c-9445-20c1d1a133f7",
+        "Name": "Trichoglossus haematodus moluccanus",
+        "Price": 193.31
+    },
+    {
+        "Id": "456f7647-7978-4e19-83b6-f1064cb5c724",
+        "Name": "Tockus erythrorhyncus",
+        "Price": 358.59
+    },
+    {
+        "Id": "7365ae7b-9ef7-4cd7-8183-f10a5408fcbe",
+        "Name": "Cordylus giganteus",
+        "Price": 196.19
+    },
+    {
+        "Id": "0fbd8cb8-c47a-485e-a5ca-6f8f7b232e14",
+        "Name": "Ara chloroptera",
+        "Price": 471.08
+    },
+    {
+        "Id": "de75f472-5350-40d7-9287-a67343c1cc43",
+        "Name": "Laniaurius atrococcineus",
+        "Price": 967.28
+    },
+    {
+        "Id": "c725ac70-bc61-4935-8c35-69b5449b5a99",
+        "Name": "Podargus strigoides",
+        "Price": 286.11
+    },
+    {
+        "Id": "909d449e-a0a0-4599-bb81-d5c98b8712f0",
+        "Name": "Macaca fuscata",
+        "Price": 96.11
+    },
+    {
+        "Id": "b6eefa89-562f-4bf9-823f-c8fecb251c65",
+        "Name": "Eremophila alpestris",
+        "Price": 524.86
+    },
+    {
+        "Id": "6d6f00a0-66b1-43f4-86cf-3e96cb2cad89",
+        "Name": "Phalacrocorax varius",
+        "Price": 451.04
+    },
+    {
+        "Id": "4e883f17-9190-4b27-ba1c-dd91741c5699",
+        "Name": "Crotalus triseriatus",
+        "Price": 633.27
+    },
+    {
+        "Id": "9ab3a066-7bf7-4539-a222-34ac0983b8c4",
+        "Name": "Eumetopias jubatus",
+        "Price": 906.78
+    },
+    {
+        "Id": "fab4d0c3-8dc5-4ef9-a2a2-fac69950c050",
+        "Name": "Hymenolaimus malacorhynchus",
+        "Price": 535.91
+    },
+    {
+        "Id": "b6db06e1-2288-472d-8292-527f74cce926",
+        "Name": "Casmerodius albus",
+        "Price": 324.26
+    },
+    {
+        "Id": "ab057265-b925-4f2e-ba0f-2dae7cf534cb",
+        "Name": "Mirounga leonina",
+        "Price": 241.65
+    },
+    {
+        "Id": "3c3e3082-01c3-434f-af36-aa5ec57e40a3",
+        "Name": "Petaurus norfolcensis",
+        "Price": 415.91
+    },
+    {
+        "Id": "7376ef90-2270-4c99-9b30-8dc74551325a",
+        "Name": "Graspus graspus",
+        "Price": 883.57
+    },
+    {
+        "Id": "a04d1e6b-5a68-4e71-ad46-ac2da01eec81",
+        "Name": "Alligator mississippiensis",
+        "Price": 525.09
+    },
+    {
+        "Id": "f5253fc1-c427-43b1-8380-5c400b7e7edb",
+        "Name": "Macropus eugenii",
+        "Price": 347.45
+    },
+    {
+        "Id": "4667fb0e-8069-4036-81b4-f05bfc6e36b7",
+        "Name": "Cynictis penicillata",
+        "Price": 272.79
+    },
+    {
+        "Id": "67bcc2ab-5eef-4954-8e84-483ebbc2ea74",
+        "Name": "Ovis musimon",
+        "Price": 439.92
+    },
+    {
+        "Id": "8c7a11cf-a726-4afa-9032-64af1fad8b8e",
+        "Name": "Funambulus pennati",
+        "Price": 770.87
+    },
+    {
+        "Id": "c376bcce-9fd4-4350-9c6a-29d1b466a435",
+        "Name": "Phoeniconaias minor",
+        "Price": 429.82
+    },
+    {
+        "Id": "d74e9419-0cf6-491c-8ff5-aef85e8da253",
+        "Name": "Carduelis uropygialis",
+        "Price": 542.75
+    },
+    {
+        "Id": "975015b1-879c-455c-a028-4eada5144af3",
+        "Name": "unavailable",
+        "Price": 193.63
+    },
+    {
+        "Id": "3ccae792-7aab-491f-b94b-fbf2770b8837",
+        "Name": "Columba palumbus",
+        "Price": 889.24
+    },
+    {
+        "Id": "8fc0857e-faad-42c1-8249-a85205bb9e36",
+        "Name": "Oryx gazella",
+        "Price": 729.62
+    },
+    {
+        "Id": "8c9a7f5e-312c-44dc-a517-94b704efa2e0",
+        "Name": "Chlamydosaurus kingii",
+        "Price": 880.11
+    },
+    {
+        "Id": "b51f1e40-63a3-443f-b965-b5f0cf5f5d3c",
+        "Name": "Sula dactylatra",
+        "Price": 98.15
+    },
+    {
+        "Id": "b781ded3-2921-4e76-93c4-9052b5fb2072",
+        "Name": "Alcelaphus buselaphus caama",
+        "Price": 678.8
+    },
+    {
+        "Id": "86b3dc11-154d-420b-b230-742e139bb84c",
+        "Name": "Phascolarctos cinereus",
+        "Price": 810.58
+    },
+    {
+        "Id": "d8f1fb46-e33f-4258-b707-1871803ba86f",
+        "Name": "Papio cynocephalus",
+        "Price": 438.84
+    },
+    {
+        "Id": "5e20262c-cb09-4da1-aeb7-630850dd8ed6",
+        "Name": "Uraeginthus granatina",
+        "Price": 876.93
+    },
+    {
+        "Id": "d7bad72f-bbdf-4fcd-9272-1680f2b91c08",
+        "Name": "Dusicyon thous",
+        "Price": 373.24
+    },
+    {
+        "Id": "65d8269e-face-4875-907a-c9860ab90a1a",
+        "Name": "Zenaida asiatica",
+        "Price": 770.82
+    },
+    {
+        "Id": "38d7bdd1-5f35-4b50-8019-3f79cc639f43",
+        "Name": "Alligator mississippiensis",
+        "Price": 552.43
+    },
+    {
+        "Id": "83a65900-c28d-458b-a56b-571f64b0d30e",
+        "Name": "Manouria emys",
+        "Price": 838.26
+    },
+    {
+        "Id": "e1b65e7f-163e-433a-94a8-8518ee023681",
+        "Name": "Amblyrhynchus cristatus",
+        "Price": 386.96
+    },
+    {
+        "Id": "38834658-94be-4ef9-85c1-0142601063bc",
+        "Name": "Uraeginthus granatina",
+        "Price": 175.5
+    },
+    {
+        "Id": "2f3fc4ff-7a1c-43e5-996e-ff03fdc4cd1d",
+        "Name": "unavailable",
+        "Price": 297.02
+    },
+    {
+        "Id": "55899b12-78ac-4705-b32c-18bb65559902",
+        "Name": "Francolinus coqui",
+        "Price": 354.59
+    },
+    {
+        "Id": "fa4ec4aa-8427-4cf8-b8d5-7883baa233f3",
+        "Name": "Pelecanus conspicillatus",
+        "Price": 78.02
+    },
+    {
+        "Id": "2814ec97-a9e7-430f-9278-f77282d96222",
+        "Name": "Connochaetus taurinus",
+        "Price": 632.66
+    },
+    {
+        "Id": "581a51ba-a99d-433e-8c54-8311bf609cd9",
+        "Name": "Laniarius ferrugineus",
+        "Price": 434.03
+    },
+    {
+        "Id": "45f4cb7e-6e72-4085-b96e-ea4aae2b96b6",
+        "Name": "Cacatua tenuirostris",
+        "Price": 628.13
+    },
+    {
+        "Id": "82780b38-d851-4895-8445-8a43f06bff5d",
+        "Name": "Cathartes aura",
+        "Price": 498.6
+    },
+    {
+        "Id": "d190c10a-6b92-4996-bd11-630a68f9df70",
+        "Name": "Gyps bengalensis",
+        "Price": 402.93
+    },
+    {
+        "Id": "acdf47f5-40d5-4410-bd8f-e7f2879d6c06",
+        "Name": "Damaliscus lunatus",
+        "Price": 846.62
+    },
+    {
+        "Id": "b6b7c39d-3b84-4651-a0db-69844cc92c0d",
+        "Name": "Alopex lagopus",
+        "Price": 800.59
+    },
+    {
+        "Id": "1960dc8b-a8f7-452f-b655-7b2e9ece1308",
+        "Name": "Paroaria gularis",
+        "Price": 859.15
+    },
+    {
+        "Id": "d5a34eee-d489-4c3a-84cb-e9066754520c",
+        "Name": "Centrocercus urophasianus",
+        "Price": 506.0
+    },
+    {
+        "Id": "858a0098-e4ed-4cbc-ad30-cfba75003b50",
+        "Name": "Ara ararauna",
+        "Price": 275.81
+    },
+    {
+        "Id": "12971009-f8bc-4715-8fbb-90e6b07885de",
+        "Name": "Colobus guerza",
+        "Price": 131.26
+    },
+    {
+        "Id": "f2b4041a-4f42-4423-8a4f-0843a135fa9b",
+        "Name": "Hymenolaimus malacorhynchus",
+        "Price": 188.75
+    },
+    {
+        "Id": "28e560de-db9d-4a52-b10f-55be68fa7a85",
+        "Name": "Ictalurus furcatus",
+        "Price": 887.24
+    },
+    {
+        "Id": "02777dfe-6dca-41dd-9569-5e856dd92244",
+        "Name": "Chlamydosaurus kingii",
+        "Price": 569.72
+    },
+    {
+        "Id": "6a552aee-4bf3-46ba-8da7-9db4f28afa1d",
+        "Name": "Bison bison",
+        "Price": 542.85
+    },
+    {
+        "Id": "650f768b-6491-4043-83ae-5941a50ff4f8",
+        "Name": "Sylvilagus floridanus",
+        "Price": 439.33
+    },
+    {
+        "Id": "59b8ac27-c0e5-4af0-9a77-5684bc8d7fe7",
+        "Name": "Bubo virginianus",
+        "Price": 218.31
+    },
+    {
+        "Id": "c6b563bb-4a2d-44d0-92b8-a334971d1191",
+        "Name": "Papio cynocephalus",
+        "Price": 763.69
+    },
+    {
+        "Id": "a9e877da-6638-4124-a669-214049602b09",
+        "Name": "Equus hemionus",
+        "Price": 351.51
+    },
+    {
+        "Id": "c72541c9-03fb-4b77-953e-9c69638964b5",
+        "Name": "Mephitis mephitis",
+        "Price": 534.95
+    },
+    {
+        "Id": "d4c7022c-da2b-41a0-8702-dc30e9be77b6",
+        "Name": "Bos frontalis",
+        "Price": 224.5
+    },
+    {
+        "Id": "e88e1ba0-c45f-4df2-a862-9fa7ccf1e20c",
+        "Name": "Tachybaptus ruficollis",
+        "Price": 529.68
+    },
+    {
+        "Id": "5f746e57-e0fe-4fbc-ab2a-1dd7ae984e94",
+        "Name": "Bucephala clangula",
+        "Price": 918.28
+    }
+]

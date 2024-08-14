@@ -57,6 +57,6 @@ resource "null_resource" "sam_metadata_aws_lambda_function_lambda" {
     resource_name        = "aws_lambda_function.lambda"
     resource_type        = "ZIP_LAMBDA_FUNCTION"
     original_source_code = var.filepath
-    built_output_path    = var.filepath
+    built_output_path    = local.full_file_path
   }
 }

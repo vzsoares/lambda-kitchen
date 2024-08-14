@@ -1,8 +1,11 @@
 package store
 
 import (
+	"encoding/json"
 	"errors"
 	"lambdas/go-microservice-handlers/types"
+	"os"
+	"path"
 )
 
 type MemoryStore struct {
@@ -12,13 +15,29 @@ type MemoryStore struct {
 var _ types.Store = (*MemoryStore)(nil)
 
 func NewMemoryStore() *MemoryStore {
-	return &MemoryStore{store: make(map[string]types.Product)}
+	bytes, err := os.ReadFile(path.Join("./", "db.stub.json"))
+	if err != nil {
+		panic(err.Error())
+	}
+
+	var data []types.Product
+	err = json.Unmarshal(bytes, &data)
+
+	endData := make(map[string]types.Product)
+	for d := 0; d < len(data); d++ {
+		target := data[d]
+		endData[target.Id] = target
+	}
+
+	return &MemoryStore{store: endData}
 }
+
 func (s *MemoryStore) Put(p types.Product) error {
 	s.store[p.Id] = p
 
 	return nil
 }
+
 func (s *MemoryStore) Get(id string) (*types.Product, error) {
 	p, ok := s.store[id]
 	if !ok {
