@@ -14,7 +14,7 @@ type MemoryStore struct {
 
 var _ types.Store = (*MemoryStore)(nil)
 
-func NewMemoryStore() *MemoryStore {
+func LoadFakeDb() map[string]types.Product {
 	bytes, err := os.ReadFile(path.Join("./", "db.stub.json"))
 	if err != nil {
 		panic(err.Error())
@@ -23,13 +23,17 @@ func NewMemoryStore() *MemoryStore {
 	var data []types.Product
 	err = json.Unmarshal(bytes, &data)
 
-	endData := make(map[string]types.Product)
+	result := make(map[string]types.Product)
 	for d := 0; d < len(data); d++ {
 		target := data[d]
-		endData[target.Id] = target
+		result[target.Id] = target
 	}
+	return result
+}
 
-	return &MemoryStore{store: endData}
+func NewMemoryStore() *MemoryStore {
+	fakeData := LoadFakeDb()
+	return &MemoryStore{store: fakeData}
 }
 
 func (s *MemoryStore) Put(p types.Product) error {
