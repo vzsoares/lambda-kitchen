@@ -8,7 +8,7 @@ terraform {
     # REPLACE THIS with UNIQUE key!
     # e.g: {domain}/{project}/terraform.tfstate
     #####################################
-    key = "lambda-kitchen/go-microservice-handlers/terraform.tfstate"
+    key = "lambda-kitchen/terraform.tfstate"
 
     region         = "us-east-1"
     dynamodb_table = "terraform-iac-locks"
