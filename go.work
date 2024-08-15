@@ -1,3 +1,6 @@
 go 1.22
 
-use ./lambdas/go-microservice-handlers
+use (
+	./lambdas/go-microservice-handlers
+	./lambdas/go-monolithic-http
+)

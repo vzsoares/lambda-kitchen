@@ -22,3 +22,12 @@ module "go-microservice-handlers" {
   gateway_execution_arn = module.api_gateway.execution_arn
   lambda_iam_arn        = data.aws_iam_role.role.arn
 }
+
+module "go-monolithic-http" {
+  source = "../../../lambdas/go-monolithic-http/infra"
+
+  stage                 = local.stage
+  gateway_id            = module.api_gateway.id
+  gateway_execution_arn = module.api_gateway.execution_arn
+  lambda_iam_arn        = data.aws_iam_role.role.arn
+}
