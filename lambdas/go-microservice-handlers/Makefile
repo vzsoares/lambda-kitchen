@@ -16,8 +16,7 @@ FUNCTIONS := get-product put-product
 
 STAGE ?= dev
 
-WD_dev=./infra/environments/dev
-WD_prod=./infra/environments/prod
+BASE_TF_WORK_DIR=../../infra/environments
 
 SAM_COMMON_AGRS=--hook-name terraform --beta-features
 SAM_TERRAFORM_ROOT=--terraform-project-root-path ../../../
@@ -40,7 +39,7 @@ build-%:
 ##@
 
 sam-build: ##@ Build for sam
-> @make build && cd ${WD_${STAGE}} && ${SAM} build ${SAM_COMMON_AGRS} ${SAM_TERRAFORM_ROOT} ${EXTRA}
+> @make build && cd ${BASE_TF_WORK_DIR}/${STAGE} && ${SAM} build ${SAM_COMMON_AGRS} ${SAM_TERRAFORM_ROOT} ${EXTRA}
 
 start: ##@ Start local api
        ##@ - if this is your first run then
@@ -48,7 +47,7 @@ start: ##@ Start local api
 > @make watch-build start-api -j
 
 start-api:
-> @cd ${WD_${STAGE}} && ${SAM} local start-api --debug --skip-pull-image ${SAM_COMMON_AGRS}
+> @cd ${BASE_TF_WORK_DIR}/${STAGE} && ${SAM} local start-api --debug --skip-pull-image ${SAM_COMMON_AGRS}
 
 watch-build:
 > @npx nodemon -e go --signal SIGTERM --exec 'make' sam-build EXTRA=--skip-prepare-infra
@@ -60,14 +59,14 @@ watch-build:
 deploy: ##@ Deploy to current $STAGE
 > @echo "Deploying for stage: ${STAGE}"
 > @make build
-> @cd ${WD_${STAGE}} && ${TERRAFORM} init && ${TERRAFORM} apply -auto-approve
+> @cd ${BASE_TF_WORK_DIR}/${STAGE} && ${TERRAFORM} init && ${TERRAFORM} apply -auto-approve
 
 ##@
 ##@ Terraform
 ##@
 
 tf-%: ##@ run Terraform %
-> @cd ${WD_${STAGE}} && ${TERRAFORM} $*
+> @cd ${BASE_TF_WORK_DIR}/${STAGE} && ${TERRAFORM} $*
 
 ##@
 ##@ Misc commands
