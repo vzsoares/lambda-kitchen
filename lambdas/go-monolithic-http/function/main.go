@@ -2,7 +2,6 @@ package main
 
 import (
 	"context"
-	"encoding/json"
 	"fmt"
 	"net/http"
 	"time"
@@ -12,32 +11,36 @@ import (
 	"github.com/awslabs/aws-lambda-go-api-proxy/httpadapter"
 )
 
+var GET = "GET"
+var PUT = "PUT"
+
 var httpLambda *httpadapter.HandlerAdapter
 
-func buildPath(p string) string {
-	return fmt.Sprint("/go-monolithic-http", p)
+func buildPath(p string, m *string) string {
+	var res string
+	if m == nil {
+		res = fmt.Sprint("/go-monolithic-http", p)
+	} else {
+		res = fmt.Sprint(*m, " /go-monolithic-http", p)
+	}
+	return res
 }
 
 func init() {
-	http.HandleFunc(buildPath("/ping"), func(w http.ResponseWriter, r *http.Request) {
-		json.NewEncoder(w).Encode(Response{From: "net/http", Message: time.Now().Format(time.UnixDate)})
+	http.HandleFunc(buildPath("/ping", nil), func(w http.ResponseWriter, r *http.Request) {
+		HttpRespond(w, http.StatusOK, time.UnixDate)
 	})
+
+	http.HandleFunc(buildPath("/product", &GET), GetProduct)
+	http.HandleFunc(buildPath("/product", &PUT), PutProduct)
 
 	httpLambda = httpadapter.New(http.DefaultServeMux)
 }
 
 func Handler(ctx context.Context, req events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
-
-	fmt.Println(req.Path)
-	fmt.Println("BABABA")
 	return httpLambda.ProxyWithContext(ctx, req)
 }
 
 func main() {
 	lambda.Start(Handler)
-}
-
-type Response struct {
-	From    string `json:"from"`
-	Message string `json:"message"`
 }
