@@ -11,7 +11,7 @@ FINAL_PATH="./lib/nodejs/${LAYER_NAME}"
 
 deploy: ##@ Deploy to current $STAGE
 > @echo "Deploying for stage: ${STAGE}"
-> @npm exec -- deploy --stage ${STAGE} --aws-profile ${AWS_PROFILE}
+> @npm exec -- sls deploy --stage ${STAGE} --aws-profile ${AWS_PROFILE}
 
 build: ##@ Build to current $STAGE
 > @echo "Building for stage: ${STAGE}"

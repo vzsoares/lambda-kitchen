@@ -1,5 +1,5 @@
 {
-    "name": "lambda-typescript-zip",
+    "name": "typescript-zip-cli",
     "version": "0.1.0",
     "description": "",
     "main": "handler.ts",
