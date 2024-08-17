@@ -4,6 +4,8 @@ version = 0.1
 
 [default]
 [default.global.parameters]
+s3_bucket="zenhalab-artifacts-dev"
+s3_prefix="sam"
 stack_name = "typescript-monolithic-express"
 
 [default.build.parameters]
