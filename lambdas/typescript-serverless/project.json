@@ -2,7 +2,7 @@
     "name": "typescript-serverless",
     "$schema": "../../node_modules/nx/schemas/project-schema.json",
     "sourceRoot": "lambdas/typescript-serverless/src",
-    "projectType": "library",
+    "projectType": "application",
     "tags": [],
     "// targets": "to see all targets run: nx show project typescript-serverless --web",
     "targets": {}

@@ -2,7 +2,7 @@
     "name": "typescript-layer",
     "$schema": "../../node_modules/nx/schemas/project-schema.json",
     "sourceRoot": "lambdas/typescript-layer/src",
-    "projectType": "library",
+    "projectType": "application",
     "tags": [],
     "// targets": "to see all targets run: nx show project typescript-layer --web",
     "targets": {}
