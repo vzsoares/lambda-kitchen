@@ -4,7 +4,6 @@
     "description": "",
     "main": "handler.ts",
     "scripts": {
-        
         "prettier-format": "prettier --ignore-unknown --write .",
         "prettier-check": "prettier --ignore-unknown --check .",
         "check-types": "tsc --project ./tsconfig.json --noemit && echo 'Types are valid ✔︎'",
@@ -40,5 +39,8 @@
         "lint-staged": "^13.2.2",
         "prettier": "^2.8.8",
         "typescript": "^5.0.4"
+    },
+    "nx": {
+        "includedScripts": []
     }
 }

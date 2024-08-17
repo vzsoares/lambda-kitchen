@@ -29,6 +29,7 @@
     "targetDefaults": {
         "build": {
             "cache": true,
+            "dependsOn": ["lint", "test"],
             "outputs": [
                 "{projectRoot}/dist",
                 "{projectRoot}/functions/**/function.zip",
