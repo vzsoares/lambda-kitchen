@@ -24,3 +24,9 @@ post-build: ##@ Create layer folder
 > @mkdir -p "${FINAL_PATH}" && cp -r dist/* "${FINAL_PATH}" && \
 (cd "${FINAL_PATH}" && yarn init -y 1> /dev/null)
 
+declare:
+> @yarn tsc index.ts --declaration --allowJs --emitDeclarationOnly --outDir types
+
+link:
+> @mkdir -p /opt/nodejs
+> @sudo ln -sf `pwd` /opt/nodejs/
