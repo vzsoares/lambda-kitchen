@@ -8,6 +8,7 @@
     "targets": {
         "deploy": {
             "executor": "nx:run-commands",
+            "dependsOn": ["post-build"],
             "options": {
                 "cwd": "{projectRoot}",
                 "command": "make deploy"
@@ -15,9 +16,25 @@
         },
         "build": {
             "executor": "nx:run-commands",
+            "dependsOn": ["pre-build"],
             "options": {
                 "cwd": "{projectRoot}",
                 "command": "make build"
+            }
+        },
+        "pre-build": {
+            "executor": "nx:run-commands",
+            "options": {
+                "cwd": "{projectRoot}",
+                "command": "make pre-build"
+            }
+        },
+        "post-build": {
+            "dependsOn": ["build"],
+            "executor": "nx:run-commands",
+            "options": {
+                "cwd": "{projectRoot}",
+                "command": "make post-build"
             }
         }
     }
