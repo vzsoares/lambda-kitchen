@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-    displayName: 'typescript-function-based',
+    displayName: 'typescript-microservice-handlers',
     preset: '../../jest.preset.js',
     testEnvironment: 'node',
     transform: {

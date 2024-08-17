@@ -17,7 +17,7 @@
         "skipDefaultLibCheck": true,
         "baseUrl": ".",
         "paths": {
-            "typescript-function-based": [
+            "typescript-microservice-handlers": [
                 "lambdas/typescript-microservice-handlers/src/index.ts"
             ],
             "typescript-layer": ["lambdas/typescript-layer/index.ts"],
