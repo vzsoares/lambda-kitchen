@@ -1,3 +1,5 @@
+/* eslint-disable */
+// @ts-nocheck
 const esbuild = require('esbuild');
 
 esbuild.build({
@@ -7,4 +9,5 @@ esbuild.build({
     minify: false,
     target: 'es2020',
     outdir: 'dist/',
+    sourcemap: true,
 });

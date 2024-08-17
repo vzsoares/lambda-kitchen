@@ -1,3 +1,5 @@
+/* eslint-disable */
+// @ts-nocheck
 const esbuild = require('esbuild');
 
 esbuild.build({

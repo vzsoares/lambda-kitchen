@@ -7,17 +7,10 @@
         "prettier-format": "prettier --ignore-unknown --write .",
         "prettier-check": "prettier --ignore-unknown --check .",
         "check-types": "tsc --project ./tsconfig.json --noemit && echo 'Types are valid ✔︎'",
-        "prepare": "husky install",
         "deploy": "bash deploy_prod.sh",
         "deploy:dev": "bash deploy_dev.sh",
         "invoke": "aws lambda invoke --function-name i-say-hello out --log-type Tail --query 'LogResult' --output text |  base64 -d",
         "invoke:dev": "aws lambda invoke --function-name i-say-hello-dev out --log-type Tail --query 'LogResult' --output text |  base64 -d"
-    },
-    "lint-staged": {
-        "*.{ts,tsx,js,jsx}": [
-            "prettier --write",
-            "eslint --fix"
-        ]
     },
     "keywords": [],
     "author": "",
@@ -26,19 +19,7 @@
     "devDependencies": {
         "@types/aws-lambda": "^8.10.114",
         "@types/node": "^18.16.0",
-        "@typescript-eslint/eslint-plugin": "^5.59.1",
-        "@typescript-eslint/parser": "^5.59.1",
-        "esbuild": "^0.17.18",
-        "eslint": "^8.39.0",
-        "eslint-config-prettier": "^8.8.0",
-        "eslint-import-resolver-typescript": "^3.5.5",
-        "eslint-plugin-import": "^2.27.5",
-        "eslint-plugin-log": "^1.2.7",
-        "eslint-plugin-prettier": "^4.2.1",
-        "husky": "^8.0.3",
-        "lint-staged": "^13.2.2",
-        "prettier": "^2.8.8",
-        "typescript": "^5.0.4"
+        "esbuild": "^0.17.18"
     },
     "nx": {
         "includedScripts": []

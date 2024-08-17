@@ -5,7 +5,7 @@
     "implicitDependencies": ["*"],
     "targets": {
         "deploy": {
-            "dependsOn": ["^build", "^push"],
+            "dependsOn": ["^build", "^push", "^deploy"],
             "cache": true,
             "configurations": {
                 "prod": {
