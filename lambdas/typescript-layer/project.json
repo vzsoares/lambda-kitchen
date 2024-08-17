@@ -16,7 +16,7 @@
         },
         "build": {
             "executor": "nx:run-commands",
-            "dependsOn": ["pre-build"],
+            "dependsOn": ["pre-build", "test", "lint"],
             "options": {
                 "cwd": "{projectRoot}",
                 "command": "make build"

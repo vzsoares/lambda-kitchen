@@ -29,7 +29,7 @@
     "targetDefaults": {
         "build": {
             "cache": true,
-            "dependsOn": ["lint", "test"],
+            "dependsOn": ["lint", "test", "pre-build"],
             "outputs": [
                 "{projectRoot}/dist",
                 "{projectRoot}/functions/**/function.zip",
@@ -55,7 +55,7 @@
         },
         "deploy": {
             "cache": false,
-            "dependsOn": ["build", "test", "lint"],
+            "dependsOn": ["^build", "build"],
             "configurations": {
                 "prod": {
                     "args": ["STAGE=prod"]
