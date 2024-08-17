@@ -1,4 +1,4 @@
-service: hello-world-typescript-serverless
+service: typescript-serverless
 frameworkVersion: '3'
 
 provider:
