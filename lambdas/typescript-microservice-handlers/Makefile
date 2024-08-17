@@ -13,4 +13,4 @@ deploy: ##@ Deploy to current $STAGE
 
 build: ##@ Build to current $STAGE
 > @echo "Building for stage: ${STAGE}"
-> @sam package
+> @sam build
