@@ -12,7 +12,7 @@ variable "lambda_iam_arn" {
 }
 
 locals {
-  base_route = "go-microservice-handlers"
+  base_route = "go-microservice-handlers-terraform"
   functions = {
     F1 = { "name" = "get-product", "route" = "GET /${local.base_route}/get-product" }
     F2 = { "name" = "put-product", "route" = "PUT /${local.base_route}/put-product" }

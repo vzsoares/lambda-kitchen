@@ -2,8 +2,8 @@ package main
 
 import (
 	"context"
-	"lambdas/go-microservice-handlers/store"
-	"lambdas/go-microservice-handlers/tools"
+	"lambdas/go-microservice-handlers-terraform/store"
+	"lambdas/go-microservice-handlers-terraform/tools"
 
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"

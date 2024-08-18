@@ -14,8 +14,8 @@ module "api_gateway" {
   gateway_name = "lambda-kitchen"
 }
 
-module "go-microservice-handlers" {
-  source = "../../../lambdas/go-microservice-handlers/infra"
+module "go-microservice-handlers-terraform" {
+  source = "../../../lambdas/go-microservice-handlers-terraform/infra"
 
   stage                 = local.stage
   gateway_id            = module.api_gateway.id
@@ -23,8 +23,8 @@ module "go-microservice-handlers" {
   lambda_iam_arn        = data.aws_iam_role.role.arn
 }
 
-module "go-monolithic-http" {
-  source = "../../../lambdas/go-monolithic-http/infra"
+module "go-monolithic-http-terraform" {
+  source = "../../../lambdas/go-monolithic-http-terraform/infra"
 
   stage                 = local.stage
   gateway_id            = module.api_gateway.id

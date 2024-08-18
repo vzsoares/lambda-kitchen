@@ -1,8 +1,8 @@
 {
-    "name": "go-monolithic-http",
+    "name": "go-monolithic-http-terraform",
     "$schema": "../../node_modules/nx/schemas/project-schema.json",
     "projectType": "application",
-    "sourceRoot": "lambdas/go-monolithic-http",
+    "sourceRoot": "lambdas/go-monolithic-http-terraform",
     "tags": [],
     "targets": {
         "build": {

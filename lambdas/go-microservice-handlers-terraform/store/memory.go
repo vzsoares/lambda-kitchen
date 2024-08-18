@@ -3,7 +3,7 @@ package store
 import (
 	"encoding/json"
 	"errors"
-	"lambdas/go-monolithic-http/types"
+	"lambdas/go-microservice-handlers-terraform/types"
 	"os"
 	"path"
 )

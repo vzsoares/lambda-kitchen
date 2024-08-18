@@ -12,7 +12,7 @@ variable "lambda_iam_arn" {
 }
 
 locals {
-  base_route = "go-monolithic-http"
+  base_route = "go-monolithic-http-terraform"
 }
 
 module "lambda_function" {

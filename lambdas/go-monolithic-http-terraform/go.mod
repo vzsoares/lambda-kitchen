@@ -1,4 +1,4 @@
-module lambdas/go-monolithic-http
+module lambdas/go-monolithic-http-terraform
 
 go 1.22
 

@@ -19,9 +19,9 @@ var httpLambda *httpadapter.HandlerAdapter
 func buildPath(p string, m *string) string {
 	var res string
 	if m == nil {
-		res = fmt.Sprint("/go-monolithic-http", p)
+		res = fmt.Sprint("/go-monolithic-http-terraform", p)
 	} else {
-		res = fmt.Sprint(*m, " /go-monolithic-http", p)
+		res = fmt.Sprint(*m, " /go-monolithic-http-terraform", p)
 	}
 	return res
 }

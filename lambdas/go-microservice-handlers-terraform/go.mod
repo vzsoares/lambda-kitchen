@@ -1,4 +1,4 @@
-module lambdas/go-microservice-handlers
+module lambdas/go-microservice-handlers-terraform
 
 go 1.22
 

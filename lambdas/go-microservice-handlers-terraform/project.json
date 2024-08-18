@@ -1,8 +1,8 @@
 {
-    "name": "go-microservice-handlers",
+    "name": "go-microservice-handlers-terraform",
     "$schema": "../../node_modules/nx/schemas/project-schema.json",
     "projectType": "application",
-    "sourceRoot": "lambdas/go-microservice-handlers",
+    "sourceRoot": "lambdas/go-microservice-handlers-terraform",
     "tags": [],
     "targets": {
         "build": {

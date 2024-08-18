@@ -5,8 +5,8 @@ import (
 	"io"
 	"net/http"
 
-	"lambdas/go-monolithic-http/store"
-	"lambdas/go-monolithic-http/types"
+	"lambdas/go-monolithic-http-terraform/store"
+	"lambdas/go-monolithic-http-terraform/types"
 )
 
 type handler func(w http.ResponseWriter, r *http.Request)
