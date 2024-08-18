@@ -88,7 +88,7 @@
                 "cacheableOperations": ["build", "test", "lint", "e2e"],
                 "bucket": "zenhalab-artifacts-dev",
                 "name": "zenhalab-artifacts-dev",
-                "prefix": "cache/nx/microservices/",
+                "prefix": "cache/nx/lambda-kitchen/",
                 "region": "us-east-1",
                 "forcePathStyle": true,
                 "readOnly": false
@@ -100,7 +100,7 @@
                 "cacheableOperations": ["build", "test", "lint", "e2e"],
                 "bucket": "zenhalab-artifacts-prod",
                 "name": "zenhalab-artifacts-prod",
-                "prefix": "cache/nx/microservices/",
+                "prefix": "cache/nx/lambda-kitchen/",
                 "region": "us-east-1",
                 "forcePathStyle": true,
                 "readOnly": false
