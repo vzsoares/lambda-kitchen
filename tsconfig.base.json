@@ -17,17 +17,17 @@
         "skipDefaultLibCheck": true,
         "baseUrl": ".",
         "paths": {
-            "typescript-microservice-handlers": [
-                "lambdas/typescript-microservice-handlers/src/index.ts"
+            "typescript-microservice-handlers-sam": [
+                "lambdas/typescript-microservice-handlers-sam/src/index.ts"
             ],
-            "typescript-layer": ["lambdas/typescript-layer/index.ts"],
-            "typescript-monolithic-express": [
-                "lambdas/typescript-monolithic-express/src/index.ts"
+            "typescript-layer-serverless": ["lambdas/typescript-layer-serverless/index.ts"],
+            "typescript-monolithic-express-sam": [
+                "lambdas/typescript-monolithic-express-sam/src/index.ts"
             ],
-            "typescript-serverless": [
-                "lambdas/typescript-serverless/src/index.ts"
+            "typescript-monolithic-proxy-serverless": [
+                "lambdas/typescript-monolithic-proxy-serverless/src/index.ts"
             ],
-            "typescript-zip": ["lambdas/typescript-zip-cli/handler.ts"]
+            "typescript-handler-awscli": ["lambdas/typescript-handler-awscli/handler.ts"]
         }
     },
     "exclude": ["node_modules", "tmp"]

@@ -1,10 +1,10 @@
 {
-    "name": "typescript-layer",
+    "name": "typescript-layer-serverless",
     "$schema": "../../node_modules/nx/schemas/project-schema.json",
-    "sourceRoot": "lambdas/typescript-layer/src",
+    "sourceRoot": "lambdas/typescript-layer-serverless/src",
     "projectType": "application",
     "tags": [],
-    "// targets": "to see all targets run: nx show project typescript-layer --web",
+    "// targets": "to see all targets run: nx show project typescript-layer-serverless --web",
     "targets": {
         "deploy": {
             "executor": "nx:run-commands",

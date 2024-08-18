@@ -1,19 +1,19 @@
 {
-    "name": "typescript-monolithic-express",
+    "name": "typescript-microservice-handlers-sam",
     "version": "1.0.0",
     "description": "This library was generated with [Nx](https://nx.dev).",
-    "main": "src/index.ts",
+    "main": "index.js",
     "scripts": {},
     "keywords": [],
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "esbuild": "^0.23.0",
-        "express": "^4.19.2",
-        "serverless-http": "^3.2.0"
+        "esbuild": "^0.23.0"
     },
     "devDependencies": {
-        "@types/express": "^4.17.21"
+        "@types/aws-lambda": "^8.10.143",
+        "@types/node": "^22.1.0",
+        "esbuild": "^0.23.0"
     },
     "nx": {
         "includedScripts": []

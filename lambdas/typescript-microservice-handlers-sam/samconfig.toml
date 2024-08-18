@@ -6,7 +6,7 @@ version = 0.1
 [default.global.parameters]
 s3_bucket="zenhalab-artifacts-dev"
 s3_prefix="sam"
-stack_name = "typescript-monolithic-express"
+stack_name = "typescript-microservice-handlers-sam"
 
 [default.build.parameters]
 cached = true
@@ -18,10 +18,8 @@ lint = true
 [default.deploy.parameters]
 capabilities = "CAPABILITY_IAM"
 confirm_changeset = true
-resolve_s3 = true
 
 [default.package.parameters]
-resolve_s3 = true
 
 [default.sync.parameters]
 watch = true

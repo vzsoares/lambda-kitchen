@@ -1,4 +1,4 @@
-service: typescript-serverless
+service: typescript-monolithic-proxy-serverless
 frameworkVersion: '3'
 
 provider:

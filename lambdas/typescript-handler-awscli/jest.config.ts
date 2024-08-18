@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-    displayName: 'typescript-layer',
+    displayName: 'typescript-handler-awscli',
     preset: '../../jest.preset.js',
     testEnvironment: 'node',
     transform: {
@@ -10,5 +10,5 @@ export default {
         ],
     },
     moduleFileExtensions: ['ts', 'js', 'html'],
-    coverageDirectory: '../../coverage/lambdas/typescript-layer',
+    coverageDirectory: '../../coverage/lambdas/typescript-handler-awscli-cli',
 };

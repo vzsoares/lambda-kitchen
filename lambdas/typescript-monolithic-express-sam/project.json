@@ -1,10 +1,10 @@
 {
-    "name": "typescript-monolithic-express",
+    "name": "typescript-monolithic-express-sam",
     "$schema": "../../node_modules/nx/schemas/project-schema.json",
-    "sourceRoot": "lambdas/typescript-monolithic-express/src",
+    "sourceRoot": "lambdas/typescript-monolithic-express-sam/src",
     "projectType": "application",
     "tags": [],
-    "// targets": "to see all targets run: nx show project typescript-monolithic-express --web",
+    "// targets": "to see all targets run: nx show project typescript-monolithic-express-sam --web",
     "targets": {
         "deploy": {
             "executor": "nx:run-commands",

@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-    displayName: 'typescript-monolithic-express',
+    displayName: 'typescript-monolithic-express-sam',
     preset: '../../jest.preset.js',
     testEnvironment: 'node',
     transform: {
@@ -10,5 +10,5 @@ export default {
         ],
     },
     moduleFileExtensions: ['ts', 'js', 'html'],
-    coverageDirectory: '../../coverage/lambdas/typescript-monolithic-express',
+    coverageDirectory: '../../coverage/lambdas/typescript-monolithic-express-sam',
 };

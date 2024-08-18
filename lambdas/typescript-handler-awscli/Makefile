@@ -9,7 +9,7 @@ AWS_PROFILE ?= dev
 
 deploy: ##@ Deploy to current $STAGE
 > @echo "Deploying for stage: ${STAGE}"
-> @aws lambda update-function-code --function-name typescript-zip-cli --zip-file fileb://function.zip
+> @aws lambda update-function-code --function-name typescript-handler-awscli-cli --zip-file fileb://function.zip
 
 build: ##@ Build to current $STAGE
 > @echo "Building for stage: ${STAGE}"

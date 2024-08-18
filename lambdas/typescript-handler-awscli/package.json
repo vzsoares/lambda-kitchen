@@ -1,5 +1,5 @@
 {
-    "name": "typescript-zip-cli",
+    "name": "typescript-handler-awscli-cli",
     "version": "0.1.0",
     "description": "",
     "main": "handler.ts",

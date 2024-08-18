@@ -1,7 +1,7 @@
 {
-    "name": "typescript-microservice-handlers",
+    "name": "typescript-microservice-handlers-sam",
     "$schema": "../../node_modules/nx/schemas/project-schema.json",
-    "sourceRoot": "lambdas/typescript-microservice-handlers/src",
+    "sourceRoot": "lambdas/typescript-microservice-handlers-sam/src",
     "projectType": "application",
     "tags": [],
     "targets": {

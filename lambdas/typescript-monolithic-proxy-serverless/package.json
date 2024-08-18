@@ -1,5 +1,5 @@
 {
-    "name": "typescript-serverless",
+    "name": "typescript-monolithic-proxy-serverless",
     "version": "0.1.0",
     "description": "",
     "main": "handler.ts",

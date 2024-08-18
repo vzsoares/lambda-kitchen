@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-    displayName: 'typescript-zip',
+    displayName: 'typescript-layer-serverless',
     preset: '../../jest.preset.js',
     testEnvironment: 'node',
     transform: {
@@ -10,5 +10,5 @@ export default {
         ],
     },
     moduleFileExtensions: ['ts', 'js', 'html'],
-    coverageDirectory: '../../coverage/lambdas/typescript-zip-cli',
+    coverageDirectory: '../../coverage/lambdas/typescript-layer-serverless',
 };

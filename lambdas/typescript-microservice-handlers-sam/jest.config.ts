@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-    displayName: 'typescript-serverless',
+    displayName: 'typescript-microservice-handlers-sam',
     preset: '../../jest.preset.js',
     testEnvironment: 'node',
     transform: {
@@ -10,5 +10,6 @@ export default {
         ],
     },
     moduleFileExtensions: ['ts', 'js', 'html'],
-    coverageDirectory: '../../coverage/lambdas/typescript-serverless',
+    coverageDirectory:
+        '../../coverage/lambdas/typescript-microservice-handlers-sam',
 };
