@@ -1,8 +1,5 @@
 <h1 align="center">Lambda Kitchen</h1>
 
-</br>
-</br>
-
 <p align="center"><img src="static/a-gif-wow.gif"/></p>
 
 <p align="center">what's cooking? lambdas!</p>
