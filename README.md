@@ -31,6 +31,8 @@ lambdas/
 - sam
 - terraform
 - go
+- node
+- yarn
 
 ### Usage:
 
